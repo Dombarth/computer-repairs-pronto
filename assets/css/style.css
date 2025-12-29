@@ -326,43 +326,44 @@ h6, .heading6 { font-size: 1rem; }
   filter: brightness(0) invert(1);
 }
 
-/* Mobile header centering */
+/* Mobile header - all on one line */
 @media (max-width: 768px) {
   .logo-img {
-    height: 80px;
-    max-width: 280px;
+    height: 50px;
+    max-width: none;
+    flex: 1;
   }
   
   .header-main {
-    padding: 8px 0;
+    padding: 6px 0;
   }
   
   .header-main-inner {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
     gap: 8px;
   }
   
-  .header-contact {
-    justify-content: center;
-    width: 100%;
-    gap: 12px;
+  .logo {
+    flex: 1;
+    min-width: 0;
   }
   
-  .logo {
-    justify-content: center;
+  .header-contact {
+    flex-shrink: 0;
+    gap: 8px;
   }
   
   .btn {
-    padding: 10px 20px;
-    font-size: 0.75rem;
+    padding: 8px 12px;
+    font-size: 0.65rem;
   }
   
   .header-phone-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1.2rem;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
   }
   
   .top-bar {
@@ -643,13 +644,14 @@ h6, .heading6 { font-size: 1rem; }
   display: block;
   padding: 20px 24px;
   background: var(--white);
-  border: 1px solid var(--outline);
+  border: 2px solid var(--orange);
   font-weight: 600;
+  color: var(--orange);
 }
 
 .area-card:hover {
-  border-color: var(--orange);
-  color: var(--orange);
+  background: var(--orange);
+  color: var(--white);
 }
 
 /* FAQ */
