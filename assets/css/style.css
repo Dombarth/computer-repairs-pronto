@@ -329,8 +329,8 @@ h6, .heading6 { font-size: 1rem; }
 /* Mobile header centering */
 @media (max-width: 768px) {
   .logo-img {
-    height: 60px;
-    max-width: 200px;
+    height: 100px;
+    max-width: 320px;
   }
   
   .header-main-inner {
