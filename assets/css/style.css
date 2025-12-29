@@ -268,6 +268,92 @@ h6, .heading6 { font-size: 1rem; }
   color: var(--orange);
 }
 
+/* Dropdown Menu */
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu > li.has-dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-menu > li.has-dropdown > a::after {
+  content: "▼";
+  font-size: 0.6rem;
+  margin-left: 2px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 220px;
+  z-index: 1000;
+  list-style: none;
+  padding: 8px 0;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid var(--outline);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 0.875rem;
+  text-transform: none;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.dropdown-menu a:hover {
+  background: var(--surface);
+  color: var(--orange);
+}
+
+/* Show dropdown on hover */
+.nav-menu > li.has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Sub-dropdown for brands */
+.dropdown-menu > li.has-dropdown {
+  position: relative;
+}
+
+.dropdown-menu > li.has-dropdown > a::after {
+  content: "▶";
+  font-size: 0.5rem;
+  float: right;
+  margin-top: 4px;
+}
+
+.dropdown-menu .sub-dropdown {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  min-width: 200px;
+  z-index: 1001;
+  list-style: none;
+  padding: 8px 0;
+}
+
+.dropdown-menu > li.has-dropdown:hover .sub-dropdown {
+  display: block;
+}
+
 .nav-toggle {
   display: none;
   background: none;
