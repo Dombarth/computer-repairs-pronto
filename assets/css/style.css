@@ -314,16 +314,40 @@ h6, .heading6 { font-size: 1rem; }
 
 /* Logo Image */
 .logo-img {
-  height: 120px;
+  height: 150px;
   width: auto;
   display: block;
-  max-width: 450px;
+  max-width: 500px;
 }
 
 .footer .logo-img {
   height: 80px;
   max-width: 350px;
   filter: brightness(0) invert(1);
+}
+
+/* Mobile header centering */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 60px;
+    max-width: 200px;
+  }
+  
+  .header-main-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .header-contact {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .logo {
+    justify-content: center;
+  }
 }
 
 /* Hero Section */
