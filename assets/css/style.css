@@ -314,15 +314,15 @@ h6, .heading6 { font-size: 1rem; }
 
 /* Logo Image */
 .logo-img {
-  height: 80px;
+  height: 120px;
   width: auto;
   display: block;
-  max-width: 350px;
+  max-width: 450px;
 }
 
 .footer .logo-img {
-  height: 60px;
-  max-width: 280px;
+  height: 80px;
+  max-width: 350px;
   filter: brightness(0) invert(1);
 }
 
