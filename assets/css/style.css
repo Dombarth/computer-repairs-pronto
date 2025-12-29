@@ -2,11 +2,11 @@
 /* Fast, clean, no effects */
 
 :root {
-  --primary: #1e40af;
-  --primary-dark: #1e3a8a;
+  --primary: #00446e;
+  --primary-dark: #003559;
   --orange: #f97316;
   --orange-dark: #ea580c;
-  --dark: #0f172a;
+  --dark: #00446e;
   --surface: #f8fafc;
   --outline: #e2e8f0;
   --text: #334155;
@@ -300,9 +300,15 @@ h6, .heading6 { font-size: 1rem; }
   }
 }
 
+/* Logo Image */
+.logo-img {
+  height: 45px;
+  width: auto;
+}
+
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+  background: linear-gradient(135deg, var(--dark) 0%, #005a8a 100%);
   color: var(--white);
   padding: 80px 0;
 }
