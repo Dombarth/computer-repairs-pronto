@@ -67,49 +67,31 @@
         <nav class="nav">
             <div class="container">
                 <div class="nav-inner">
-                    <button class="nav-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('active')">☰</button>
+                    <button class="nav-toggle" onclick="document.getElementById('mobileMenu').classList.add('active')">☰ Menu</button>
                     <ul class="nav-menu">
                         <li><a href="/" class="active">Home</a></li>
                         <li class="has-dropdown">
                             <a href="services/">Services</a>
-                            <div class="mega-menu">
-                                <div class="mega-menu-inner">
-                                    <div class="mega-menu-column">
-                                        <h4>Laptop Repairs</h4>
-                                        <ul>
-                                            <li><a href="services/laptop-repairs.html">All Laptop Repairs</a></li>
-                                            <li><a href="services/laptop-repairs/dell.html">Dell Repairs</a></li>
-                                            <li><a href="services/laptop-repairs/hp.html">HP Repairs</a></li>
-                                            <li><a href="services/laptop-repairs/lenovo.html">Lenovo Repairs</a></li>
-                                            <li><a href="services/laptop-repairs/asus.html">Asus Repairs</a></li>
-                                            <li><a href="services/laptop-repairs/acer.html">Acer Repairs</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h4>Computer Repairs</h4>
-                                        <ul>
-                                            <li><a href="services/pc-repairs.html">Desktop PC Repairs</a></li>
-                                            <li><a href="services/mac-repairs.html">Mac Repairs</a></li>
-                                            <li><a href="services/screen-repairs.html">Screen Repairs</a></li>
-                                            <li><a href="services/upgrades.html">Computer Upgrades</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h4>Other Services</h4>
-                                        <ul>
-                                            <li><a href="services/data-recovery.html">Data Recovery</a></li>
-                                            <li><a href="services/virus-removal.html">Virus Removal</a></li>
-                                            <li><a href="services/network-setup.html">Network Setup</a></li>
-                                            <li><a href="services/business-it-support.html">Business IT Support</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="mega-menu-column mega-menu-cta">
-                                        <h4>Need Help?</h4>
-                                        <p>Give us a call to discuss your computer problem.</p>
-                                        <a href="tel:0400454859" class="btn">0400 454 859</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <ul class="dropdown">
+                                <li><a href="services/laptop-repairs.html">Laptop Repairs</a></li>
+                                <li><a href="services/mac-repairs.html">Mac Repairs</a></li>
+                                <li><a href="services/pc-repairs.html">PC Repairs</a></li>
+                                <li><a href="services/screen-repairs.html">Screen Repairs</a></li>
+                                <li><a href="services/data-recovery.html">Data Recovery</a></li>
+                                <li><a href="services/virus-removal.html">Virus Removal</a></li>
+                                <li><a href="services/upgrades.html">Computer Upgrades</a></li>
+                                <li><a href="services/">View All Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="services/laptop-repairs.html">Laptop Brands</a>
+                            <ul class="dropdown">
+                                <li><a href="services/laptop-repairs/dell.html">Dell Laptop Repairs</a></li>
+                                <li><a href="services/laptop-repairs/hp.html">HP Laptop Repairs</a></li>
+                                <li><a href="services/laptop-repairs/lenovo.html">Lenovo Laptop Repairs</a></li>
+                                <li><a href="services/laptop-repairs/asus.html">Asus Laptop Repairs</a></li>
+                                <li><a href="services/laptop-repairs/acer.html">Acer Laptop Repairs</a></li>
+                            </ul>
                         </li>
                         <li><a href="hills-district/">Hills District</a></li>
                         <li><a href="about.html">About</a></li>
@@ -118,6 +100,47 @@
                 </div>
             </div>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="assets/images/pronto-logo.svg" alt="Computer Repairs Pronto" class="logo-img">
+                <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('active')">×</button>
+            </div>
+            <div class="mobile-menu-content">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li>
+                        <a href="services/" onclick="event.preventDefault(); this.nextElementSibling.classList.toggle('active');">Services <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="services/laptop-repairs.html">Laptop Repairs</a>
+                            <a href="services/mac-repairs.html">Mac Repairs</a>
+                            <a href="services/pc-repairs.html">PC Repairs</a>
+                            <a href="services/screen-repairs.html">Screen Repairs</a>
+                            <a href="services/data-recovery.html">Data Recovery</a>
+                            <a href="services/virus-removal.html">Virus Removal</a>
+                            <a href="services/upgrades.html">Computer Upgrades</a>
+                            <a href="services/">View All Services</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="services/laptop-repairs.html" onclick="event.preventDefault(); this.nextElementSibling.classList.toggle('active');">Laptop Brands <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="services/laptop-repairs/dell.html">Dell Repairs</a>
+                            <a href="services/laptop-repairs/hp.html">HP Repairs</a>
+                            <a href="services/laptop-repairs/lenovo.html">Lenovo Repairs</a>
+                            <a href="services/laptop-repairs/asus.html">Asus Repairs</a>
+                            <a href="services/laptop-repairs/acer.html">Acer Repairs</a>
+                        </div>
+                    </li>
+                    <li><a href="hills-district/">Hills District</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-cta">
+                <a href="tel:0400454859">📞 Call 0400 454 859</a>
+            </div>
+        </div>
     </header>
 
     <!-- HERO -->
