@@ -16,7 +16,117 @@
     <header class="header">
         <div class="top-bar"><div class="container"><div class="top-bar-inner"><div class="top-bar-info"><span>📍 Castle Hill, Hills District NSW</span><span>🕐 Mon-Sat: 8am - 6pm</span></div><div><a href="tel:0400454859" style="color: #f97316; font-weight: 600;">0400 454 859</a></div></div></div></div>
         <div class="header-main"><div class="container"><div class="header-main-inner"><a href="../" class="logo"><img src="../assets/images/pronto-logo.svg" alt="Computer Repairs Pronto" class="logo-img"></a><div class="header-contact"><a href="tel:0400454859" class="header-phone"><span class="header-phone-icon">📞</span><div class="header-phone-text"><span>Call Us Now:</span><strong>0400 454 859</strong></div></a><a href="../contact.html" class="btn">Get a Quote</a></div></div></div></div>
-        <nav class="nav"><div class="container"><div class="nav-inner"><button class="nav-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('active')">☰</button><ul class="nav-menu"><li><a href="../">Home</a></li><li><a href="../services/">Services</a></li><li><a href="./" class="active">Hills District</a></li><li><a href="../about.html">About</a></li><li><a href="../contact.html">Contact</a></li></ul></div></div></nav>
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-inner">
+                    <button class="nav-toggle" id="menuToggle">☰ Menu</button>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="has-dropdown">
+                            <a href="../services/index.html">Services</a>
+                            <ul class="dropdown">
+                                <li><a href="../services/laptop-repairs.html">Laptop Repairs</a></li>
+                                <li><a href="../services/mac-repairs.html">Mac Repairs</a></li>
+                                <li><a href="../services/pc-repairs.html">PC Repairs</a></li>
+                                <li><a href="../services/screen-repairs.html">Screen Repairs</a></li>
+                                <li><a href="../services/data-recovery.html">Data Recovery</a></li>
+                                <li><a href="../services/virus-removal.html">Virus Removal</a></li>
+                                <li><a href="../services/upgrades.html">Computer Upgrades</a></li>
+                                <li><a href="../services/index.html">View All Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="../services/laptop-repairs.html">Laptop Brands</a>
+                            <ul class="dropdown">
+                                <li><a href="../services/laptop-repairs/dell.html">Dell Laptop Repairs</a></li>
+                                <li><a href="../services/laptop-repairs/hp.html">HP Laptop Repairs</a></li>
+                                <li><a href="../services/laptop-repairs/lenovo.html">Lenovo Laptop Repairs</a></li>
+                                <li><a href="../services/laptop-repairs/asus.html">Asus Laptop Repairs</a></li>
+                                <li><a href="../services/laptop-repairs/acer.html">Acer Laptop Repairs</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="../services/mac-repairs.html">Mac Models</a>
+                            <ul class="dropdown">
+                                <li><a href="../services/mac-repairs/macbook-air.html">MacBook Air Repairs</a></li>
+                                <li><a href="../services/mac-repairs/macbook-pro.html">MacBook Pro Repairs</a></li>
+                                <li><a href="../services/mac-repairs/imac.html">iMac Repairs</a></li>
+                                <li><a href="../services/mac-repairs.html">All Mac Repairs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html" class="active">Hills District</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="../assets/images/pronto-logo.svg" alt="Computer Repairs Pronto" class="logo-img">
+                <button class="mobile-menu-close" id="menuClose">×</button>
+            </div>
+            <div class="mobile-menu-content">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Services <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="../services/laptop-repairs.html">Laptop Repairs</a>
+                            <a href="../services/mac-repairs.html">Mac Repairs</a>
+                            <a href="../services/pc-repairs.html">PC Repairs</a>
+                            <a href="../services/screen-repairs.html">Screen Repairs</a>
+                            <a href="../services/data-recovery.html">Data Recovery</a>
+                            <a href="../services/virus-removal.html">Virus Removal</a>
+                            <a href="../services/upgrades.html">Computer Upgrades</a>
+                            <a href="../services/index.html">View All Services</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Laptop Brands <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="../services/laptop-repairs/dell.html">Dell Repairs</a>
+                            <a href="../services/laptop-repairs/hp.html">HP Repairs</a>
+                            <a href="../services/laptop-repairs/lenovo.html">Lenovo Repairs</a>
+                            <a href="../services/laptop-repairs/asus.html">Asus Repairs</a>
+                            <a href="../services/laptop-repairs/acer.html">Acer Repairs</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Mac Models <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="../services/mac-repairs/macbook-air.html">MacBook Air Repairs</a>
+                            <a href="../services/mac-repairs/macbook-pro.html">MacBook Pro Repairs</a>
+                            <a href="../services/mac-repairs/imac.html">iMac Repairs</a>
+                            <a href="../services/mac-repairs.html">All Mac Repairs</a>
+                        </div>
+                    </li>
+                    <li><a href="index.html">Hills District</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-cta">
+                <a href="tel:0400454859">📞 Call 0400 454 859</a>
+            </div>
+        </div>
+        <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('active');
+        });
+        document.getElementById('menuClose').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+        });
+        document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                var submenu = this.nextElementSibling;
+                var span = this.querySelector('span');
+                submenu.classList.toggle('active');
+                span.textContent = submenu.classList.contains('active') ? '−' : '+';
+            });
+        });
+        </script>
     </header>
 
     <section class="page-header"><div class="container"><h1>Computer Repairs Baulkham Hills</h1></div></section>
