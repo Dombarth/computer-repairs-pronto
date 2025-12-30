@@ -50,17 +50,114 @@
         <nav class="nav">
             <div class="container">
                 <div class="nav-inner">
-                    <button class="nav-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('active')">☰</button>
+                    <button class="nav-toggle" id="menuToggle">☰ Menu</button>
                     <ul class="nav-menu">
-                        <li><a href="../">Home</a></li>
-                        <li><a href="./" class="active">Services</a></li>
-                        <li><a href="../hills-district/">Hills District</a></li>
-                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="has-dropdown">
+                            <a href="index.html" class="active">Services</a>
+                            <ul class="dropdown">
+                                <li><a href="laptop-repairs.html">Laptop Repairs</a></li>
+                                <li><a href="mac-repairs.html">Mac Repairs</a></li>
+                                <li><a href="pc-repairs.html">PC Repairs</a></li>
+                                <li><a href="screen-repairs.html">Screen Repairs</a></li>
+                                <li><a href="data-recovery.html">Data Recovery</a></li>
+                                <li><a href="virus-removal.html">Virus Removal</a></li>
+                                <li><a href="upgrades.html">Computer Upgrades</a></li>
+                                <li><a href="index.html">View All Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="laptop-repairs.html">Laptop Brands</a>
+                            <ul class="dropdown">
+                                <li><a href="laptop-repairs/dell.html">Dell Laptop Repairs</a></li>
+                                <li><a href="laptop-repairs/hp.html">HP Laptop Repairs</a></li>
+                                <li><a href="laptop-repairs/lenovo.html">Lenovo Laptop Repairs</a></li>
+                                <li><a href="laptop-repairs/asus.html">Asus Laptop Repairs</a></li>
+                                <li><a href="laptop-repairs/acer.html">Acer Laptop Repairs</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="mac-repairs.html">Mac Models</a>
+                            <ul class="dropdown">
+                                <li><a href="mac-repairs/macbook-air.html">MacBook Air Repairs</a></li>
+                                <li><a href="mac-repairs/macbook-pro.html">MacBook Pro Repairs</a></li>
+                                <li><a href="mac-repairs/imac.html">iMac Repairs</a></li>
+                                <li><a href="mac-repairs.html">All Mac Repairs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../hills-district/index.html">Hills District</a></li>
                         <li><a href="../contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="../assets/images/pronto-logo.svg" alt="Computer Repairs Pronto" class="logo-img">
+                <button class="mobile-menu-close" id="menuClose">×</button>
+            </div>
+            <div class="mobile-menu-content">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Services <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="laptop-repairs.html">Laptop Repairs</a>
+                            <a href="mac-repairs.html">Mac Repairs</a>
+                            <a href="pc-repairs.html">PC Repairs</a>
+                            <a href="screen-repairs.html">Screen Repairs</a>
+                            <a href="data-recovery.html">Data Recovery</a>
+                            <a href="virus-removal.html">Virus Removal</a>
+                            <a href="upgrades.html">Computer Upgrades</a>
+                            <a href="index.html">View All Services</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Laptop Brands <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="laptop-repairs/dell.html">Dell Repairs</a>
+                            <a href="laptop-repairs/hp.html">HP Repairs</a>
+                            <a href="laptop-repairs/lenovo.html">Lenovo Repairs</a>
+                            <a href="laptop-repairs/asus.html">Asus Repairs</a>
+                            <a href="laptop-repairs/acer.html">Acer Repairs</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Mac Models <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="mac-repairs/macbook-air.html">MacBook Air Repairs</a>
+                            <a href="mac-repairs/macbook-pro.html">MacBook Pro Repairs</a>
+                            <a href="mac-repairs/imac.html">iMac Repairs</a>
+                            <a href="mac-repairs.html">All Mac Repairs</a>
+                        </div>
+                    </li>
+                    <li><a href="../hills-district/index.html">Hills District</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-cta">
+                <a href="tel:0400454859">📞 Call 0400 454 859</a>
+            </div>
+        </div>
+        <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.add('active');
+        });
+        document.getElementById('menuClose').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.remove('active');
+        });
+        document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                var submenu = this.nextElementSibling;
+                var span = this.querySelector('span');
+                submenu.classList.toggle('active');
+                span.textContent = submenu.classList.contains('active') ? '−' : '+';
+            });
+        });
+        </script>
     </header>
 
     <!-- PAGE HEADER -->
@@ -132,7 +229,7 @@
                         <span class="service-link">Learn More →</span>
                     </div>
                 </a>
-                <a href="computer-upgrades.html" class="service-card">
+                <a href="upgrades.html" class="service-card">
                     <div class="service-icon">⚡</div>
                     <div class="service-content">
                         <h3>Computer Upgrades</h3>
@@ -148,11 +245,11 @@
                         <span class="service-link">Learn More →</span>
                     </div>
                 </a>
-                <a href="onsite-repairs.html" class="service-card">
+                <a href="workshop-repairs.html" class="service-card">
                     <div class="service-icon">🚗</div>
                     <div class="service-content">
-                        <h3>workshop repairs</h3>
-                        <p>Onsite computer repairs across the Hills District for customers who cant bring it in.</p>
+                        <h3>Workshop Repairs</h3>
+                        <p>Drop off computer repairs at our workshop near Castle Hill. Same day turnaround for many jobs depending on parts availability.</p>
                         <span class="service-link">Learn More →</span>
                     </div>
                 </a>
@@ -253,19 +350,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
