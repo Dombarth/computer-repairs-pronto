@@ -1,0 +1,43 @@
+# Project Rules for Computer Repairs Pronto
+
+## Git Workflow (Quick & Thorough Push)
+
+When committing and pushing changes, always use these commands in sequence:
+
+```powershell
+# 1. Stage all changes
+git add -A
+
+# 2. Commit with descriptive message
+git commit -m "Your commit message"
+
+# 3. Pull remote changes and rebase to avoid conflicts
+git pull --rebase
+
+# 4. Push to remote
+git push
+```
+
+**Important Notes:**
+- PowerShell does not support `&&` - run commands separately
+- Always `git pull --rebase` before `git push` to avoid non-fast-forward rejections
+- If push is rejected, pull with rebase first then push again
+
+## Suburb Page Interlinking Rules
+
+### Body Content Links (Max 3 per page):
+1. Exactly 1 link to `/services/laptop-repairs.html` - anchor: "laptop repairs"
+2. Exactly 1 link to `/services/pc-repairs.html` - anchor: "PC repairs"  
+3. Exactly 1 link to `index.html` - anchor: "Hills District computer repair"
+
+### Forbidden in Body Content:
+- No links to other suburb pages
+- No blog links
+- No repeated service links
+
+### Excluded from Rules:
+- Header/navigation links (site-wide template)
+- Footer links (site-wide template)
+
+## Title Format
+`Computer Repair Help in {{SUBURB}}: Local Workshop Support`
