@@ -507,7 +507,9 @@ h6, .heading6 { font-size: 1rem; }
 .footer .logo-img {
   height: 100px;
   max-width: 400px;
-  filter: brightness(0) invert(1);
+  /* NOTE: This site uses a PNG logo (prontositelogo.png) that includes colours.
+     The previous invert filter was turning it into a solid white rectangle ("missing logo"). */
+  filter: none;
 }
 
 /* Mobile responsive - Google compliant (min 16px fonts, 48px touch targets) */
@@ -772,6 +774,14 @@ h6, .heading6 { font-size: 1rem; }
   font-size: 2.5rem;
   border-right: 8px solid var(--surface);
   border-bottom: 8px solid var(--surface);
+}
+
+/* Brand icons (e.g., Dell/HP/Lenovo/Asus/Acer) inside service cards */
+.service-icon .brand-icon {
+  width: 44px;
+  height: 44px;
+  display: block;
+  object-fit: contain;
 }
 
 .service-content {
