@@ -480,15 +480,15 @@ h6, .heading6 { font-size: 1rem; }
 
 /* Logo Image */
 .logo-img {
-  height: 150px;
+  height: 180px;
   width: auto;
   display: block;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .footer .logo-img {
-  height: 80px;
-  max-width: 350px;
+  height: 100px;
+  max-width: 400px;
   filter: brightness(0) invert(1);
 }
 
@@ -510,8 +510,8 @@ h6, .heading6 { font-size: 1rem; }
   
   /* Logo - larger and to the left */
   .logo-img {
-    height: 55px;
-    max-width: 180px;
+    height: 80px;
+    max-width: 250px;
   }
   
   .header-main {
