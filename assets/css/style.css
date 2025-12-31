@@ -369,7 +369,10 @@ h6, .heading6 { font-size: 1rem; }
 
 .mobile-menu-header .logo-img {
   height: 40px;
-  filter: brightness(0) invert(1);
+  /* The site logo is a coloured PNG; inverting makes it render as a solid white box on mobile */
+  filter: none;
+  object-fit: contain;
+  width: auto;
 }
 
 .mobile-menu-close {
