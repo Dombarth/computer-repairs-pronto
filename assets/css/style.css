@@ -439,6 +439,24 @@ h6, .heading6 { font-size: 1rem; }
   border-bottom: 1px solid var(--outline);
 }
 
+.mobile-menu-phone {
+  padding: 16px 20px;
+  background: var(--orange);
+}
+
+.mobile-menu-phone a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.mobile-menu-phone svg {
+  stroke: white;
+}
+
 .mobile-menu-cta {
   padding: 24px 20px;
   text-align: center;
