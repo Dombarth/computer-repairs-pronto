@@ -988,6 +988,19 @@ h6, .heading6 { font-size: 1rem; }
   color: var(--text);
 }
 
+/* Content area links - orange theme color */
+.content-area a {
+  color: var(--orange);
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 2px;
+}
+
+.content-area a:hover {
+  color: var(--orange-dark);
+  text-decoration-color: var(--orange-dark);
+}
+
 /* Service List */
 .service-list {
   list-style: none;
