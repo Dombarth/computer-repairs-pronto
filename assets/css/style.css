@@ -373,12 +373,13 @@ h6, .heading6 { font-size: 1rem; }
 }
 
 .mobile-menu-header .logo-img {
-  height: 40px;
-  /* Keep the mobile-header logo compact so it doesn't appear as a big white block */
+  height: 50px;
+  /* Keep the mobile-header logo compact and visible on dark background */
   background: transparent;
-  filter: none;
+  filter: brightness(0) invert(1);
   object-fit: contain;
   width: auto;
+  max-width: 200px;
 }
 
 .mobile-menu-close {
