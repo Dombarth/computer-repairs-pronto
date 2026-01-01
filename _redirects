@@ -1,0 +1,5 @@
+# Netlify Redirects
+# All non-existent URLs (404s) redirect to homepage with 301 permanent redirect
+
+# Catch-all: redirect any URL that doesn't match a file to homepage
+/*  /  301
