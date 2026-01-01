@@ -1,8 +1,8 @@
 [build]
   publish = "."
 
-# 301 redirect all 404s to homepage
+# Serve 404.html for any path that doesn't match an existing file
 [[redirects]]
   from = "/*"
-  to = "/"
-  status = 301
+  to = "/404.html"
+  status = 404

@@ -1,5 +1,4 @@
 # Netlify Redirects
-# All non-existent URLs (404s) redirect to homepage with 301 permanent redirect
+# Serve custom 404.html for any unmatched paths
 
-# Catch-all: redirect any URL that doesn't match a file to homepage
-/*  /  301
+/*  /404.html  404
