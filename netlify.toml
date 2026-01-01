@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+# 301 redirect all 404s to homepage
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 301
