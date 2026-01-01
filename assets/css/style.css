@@ -32,6 +32,11 @@ body {
   background: var(--white);
 }
 
+/* Prevent background scrolling when the full-screen mobile menu is open */
+body.mobile-menu-open {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -369,7 +374,8 @@ h6, .heading6 { font-size: 1rem; }
 
 .mobile-menu-header .logo-img {
   height: 40px;
-  /* The site logo is a coloured PNG; inverting makes it render as a solid white box on mobile */
+  /* Keep the mobile-header logo compact so it doesn't appear as a big white block */
+  background: transparent;
   filter: none;
   object-fit: contain;
   width: auto;
