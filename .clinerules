@@ -1,5 +1,16 @@
 # Project Rules for Computer Repairs Pronto
 
+## Auto Git Push After Task Completion
+
+**IMPORTANT:** Always push changes to git after completing any task. Execute these commands immediately after task completion:
+
+```powershell
+git add -A
+git commit -m "Brief description of changes"
+git pull --rebase
+git push
+```
+
 ## Git Workflow (Quick & Thorough Push)
 
 When committing and pushing changes, always use these commands in sequence:
