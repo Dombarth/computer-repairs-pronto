@@ -1,12 +1,11 @@
 # Netlify Redirects
 
-# Force https://www for all requests
-# Note: Netlify handles http->https automatically when SSL is enabled
-# These rules handle the non-www to www redirect
+# Redirect non-www to www (placed before catch-all)
+# Note: Domain-level redirects require both domains added in Netlify Dashboard
+# These rules provide additional redirect handling
 
-# Redirect non-www to www (must come before the 404 catch-all)
-http://computerrepairspronto.com.au/*    https://www.computerrepairspronto.com.au/:splat  301
-https://computerrepairspronto.com.au/*   https://www.computerrepairspronto.com.au/:splat  301
+http://computerrepairspronto.com.au/*  https://www.computerrepairspronto.com.au/:splat  301!
+https://computerrepairspronto.com.au/*  https://www.computerrepairspronto.com.au/:splat  301!
 
-# Serve custom 404.html for any unmatched paths
+# Catch-all for 404
 /*  /404.html  404
