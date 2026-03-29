@@ -1,6 +1,20 @@
 [build]
   publish = "."
 
+# Redirect non-www to www (http)
+[[redirects]]
+  from = "http://computerrepairspronto.com.au/*"
+  to = "https://www.computerrepairspronto.com.au/:splat"
+  status = 301
+  force = true
+
+# Redirect non-www to www (https)
+[[redirects]]
+  from = "https://computerrepairspronto.com.au/*"
+  to = "https://www.computerrepairspronto.com.au/:splat"
+  status = 301
+  force = true
+
 # Serve 404.html for any path that doesn't match an existing file
 [[redirects]]
   from = "/*"
