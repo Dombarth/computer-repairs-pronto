@@ -1,22 +1,14 @@
 [build]
   publish = "."
 
-# Redirect non-www to www (http)
-[[redirects]]
-  from = "http://computerrepairspronto.com.au/*"
-  to = "https://www.computerrepairspronto.com.au/:splat"
-  status = 301
-  force = true
-
-# Redirect non-www to www (https)
-[[redirects]]
-  from = "https://computerrepairspronto.com.au/*"
-  to = "https://www.computerrepairspronto.com.au/:splat"
-  status = 301
-  force = true
-
-# Serve 404.html for any path that doesn't match an existing file
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
+# All redirect rules live in the _redirects file, which is the single source
+# of truth for this site.
+#
+# Netlify always processes _redirects before netlify.toml, and _redirects ends
+# with a `/*  /404.html  404` catch-all. Any [[redirects]] table defined here
+# is therefore unreachable. Three rules previously duplicated here — the two
+# non-www to www canonicalisations and the 404 catch-all — were dead code and
+# have been removed; all three are already in _redirects, the www rules with a
+# forced `301!`.
+#
+# Add new redirects to _redirects, above the catch-all, or they will not fire.

@@ -7,5 +7,15 @@
 http://computerrepairspronto.com.au/*  https://www.computerrepairspronto.com.au/:splat  301!
 https://computerrepairspronto.com.au/*  https://www.computerrepairspronto.com.au/:splat  301!
 
+# GPU repair cluster (PRD 6)
+# Reserves the geo-free money-page path for the URL experiment in PRD 3, and
+# catches the AU "artefacting" spelling people type and link.
+# These must stay ABOVE the catch-all below or they will never fire.
+/services/graphics-card-repair     /services/graphics-card-repair-sydney  301
+/services/gpu-repair               /services/graphics-card-repair-sydney  301
+/services/gpu-repair-sydney        /services/graphics-card-repair-sydney  301
+/guides/graphics-card-artefacting  /guides/gpu-artifacting                301
+/guides/gpu-artefacting            /guides/gpu-artifacting                301
+
 # Catch-all for 404
 /*  /404.html  404

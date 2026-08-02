@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coloured blocks, lines or wrong textures on screen. What causes GPU artifacting, how to test for it, the fixes worth trying, and when the card needs hardware repair.">
+    <title>GPU Artifacting: What Causes It and How to Fix It</title>
+    <link rel="canonical" href="https://www.computerrepairspronto.com.au/guides/gpu-artifacting">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar"><div class="container"><div class="top-bar-inner"><div class="top-bar-info"><span>Castle Hill, Hills District NSW</span><span>Mon-Sat: 8am - 6pm</span></div><div><a href="tel:0400454859" style="color: #f97316; font-weight: 600;">0400 454 859</a></div></div></div></div>
+        <div class="header-main"><div class="container"><div class="header-main-inner"><a href="../" class="logo"><img src="../assets/images/prontositelogo.png" alt="Computer Repairs Pronto" class="logo-img"></a><div class="header-contact"><a href="tel:0400454859" class="header-phone"><span class="header-phone-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span><div class="header-phone-text"><span>Call Us Now:</span><strong>0400 454 859</strong></div></a><a href="../contact.html" class="btn">Get a Quote</a></div></div></div></div>
+        <nav class="nav">
+            <div class="container">
+                <div class="nav-inner">
+                    <button class="nav-toggle" id="menuToggle" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="has-dropdown">
+                            <a href="../services/index.html">Services</a>
+                            <ul class="dropdown">
+                                <li><a href="../services/laptop-repairs.html">Laptop Repairs</a></li>
+                                <li><a href="../services/mac-repairs.html">Mac Repairs</a></li>
+                                <li><a href="../services/pc-repairs.html">PC Repairs</a></li>
+                                <li><a href="../services/screen-repairs.html">Screen Repairs</a></li>
+                                <li><a href="../services/data-recovery.html">Data Recovery</a></li>
+                                <li><a href="../services/virus-removal.html">Virus Removal</a></li>
+                                <li><a href="../services/electronics-repair.html">Electronics Repair</a></li>
+                                <li><a href="../services/board-level-repair.html">Board Level Repair</a></li>
+                                <li><a href="../services/graphics-card-repair-sydney.html">Graphics Card Repair</a></li>
+                                <li><a href="../services/charging-port-repair.html">Charging Port Repair</a></li>
+                                <li><a href="../services/audio-repair.html">Audio Repair</a></li>
+                                <li><a href="../services/monitor-repair.html">Monitor Repair</a></li>
+                                <li><a href="../services/console-repair.html">Console Repair</a></li>
+                                <li><a href="../services/upgrades.html">Computer Upgrades</a></li>
+                                <li><a href="../services/index.html">View All Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="../services/laptop-repairs.html">Laptop Brands</a>
+                            <ul class="dropdown">
+                                <li><a href="../services/laptop-repairs/dell.html">Dell Laptop Repairs</a></li>
+                                <li><a href="../services/laptop-repairs/hp.html">HP Laptop Repairs</a></li>
+                                <li><a href="../services/laptop-repairs/lenovo.html">Lenovo Laptop Repairs</a></li>
+                                <li><a href="../services/laptop-repairs/asus.html">Asus Laptop Repairs</a></li>
+                                <li><a href="../services/laptop-repairs/acer.html">Acer Laptop Repairs</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="../services/mac-repairs.html">Mac Models</a>
+                            <ul class="dropdown">
+                                <li><a href="../services/mac-repairs/macbook-air.html">MacBook Air Repairs</a></li>
+                                <li><a href="../services/mac-repairs/macbook-pro.html">MacBook Pro Repairs</a></li>
+                                <li><a href="../services/mac-repairs/imac.html">iMac Repairs</a></li>
+                                <li><a href="../services/mac-repairs.html">All Mac Repairs</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../hills-district/index.html">Hills District</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <div class="mobile-menu-header">
+                <img src="../assets/images/prontositelogo.png" alt="Computer Repairs Pronto" class="logo-img">
+                <button class="mobile-menu-close" id="menuClose" aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+            </div>
+            <div class="mobile-menu-phone">
+                <a href="tel:0400454859"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> 0400 454 859</a>
+            </div>
+            <div class="mobile-menu-content">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Services <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="../services/laptop-repairs.html">Laptop Repairs</a>
+                            <a href="../services/mac-repairs.html">Mac Repairs</a>
+                            <a href="../services/pc-repairs.html">PC Repairs</a>
+                            <a href="../services/screen-repairs.html">Screen Repairs</a>
+                            <a href="../services/data-recovery.html">Data Recovery</a>
+                            <a href="../services/virus-removal.html">Virus Removal</a>
+                            <a href="../services/electronics-repair.html">Electronics Repair</a>
+                            <a href="../services/board-level-repair.html">Board Level Repair</a>
+                            <a href="../services/graphics-card-repair-sydney.html">Graphics Card Repair</a>
+                            <a href="../services/charging-port-repair.html">Charging Port Repair</a>
+                            <a href="../services/audio-repair.html">Audio Repair</a>
+                            <a href="../services/monitor-repair.html">Monitor Repair</a>
+                            <a href="../services/console-repair.html">Console Repair</a>
+                            <a href="../services/upgrades.html">Computer Upgrades</a>
+                            <a href="../services/index.html">View All Services</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Laptop Brands <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="../services/laptop-repairs/dell.html">Dell Repairs</a>
+                            <a href="../services/laptop-repairs/hp.html">HP Repairs</a>
+                            <a href="../services/laptop-repairs/lenovo.html">Lenovo Repairs</a>
+                            <a href="../services/laptop-repairs/asus.html">Asus Repairs</a>
+                            <a href="../services/laptop-repairs/acer.html">Acer Repairs</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Mac Models <span>+</span></a>
+                        <div class="mobile-submenu">
+                            <a href="../services/mac-repairs/macbook-air.html">MacBook Air Repairs</a>
+                            <a href="../services/mac-repairs/macbook-pro.html">MacBook Pro Repairs</a>
+                            <a href="../services/mac-repairs/imac.html">iMac Repairs</a>
+                            <a href="../services/mac-repairs.html">All Mac Repairs</a>
+                        </div>
+                    </li>
+                    <li><a href="../hills-district/index.html">Hills District</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-cta">
+                <a href="tel:0400454859">Call 0400 454 859</a>
+            </div>
+        </div>
+        <script src="../assets/js/mobile-menu.js"></script>
+    </header>
+
+    <section class="page-header"><div class="container"><h1>Why Your Screen Shows Coloured Blocks, Lines and Wrong Textures</h1></div></section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="content-area">
+                <p><strong>GPU artifacting, also spelled artefacting, is visual corruption caused by a graphics card producing incorrect data — coloured blocks, torn lines, flickering shapes or textures that look melted. The usual causes are overheating, an unstable overclock, failing video memory, or degraded solder joints. Cooling and driver fixes solve the software side. Memory and joint failures need hardware repair.</strong></p>
+
+                <p>That short version covers most cases. The rest of this page works through how to tell which one you are dealing with, in the order worth checking, because the free fixes are also the fastest to rule out.</p>
+
+                <h2>What It Actually Looks Like</h2>
+
+                <p>GPU artifacting takes a few recognisable forms and the shape of it tells you something about the cause.</p>
+
+                <ul class="service-list">
+                    <li><strong>Coloured blocks or squares</strong> scattered across the screen, often green, pink or magenta. Commonly video memory.</li>
+                    <li><strong>Horizontal or vertical tearing</strong>, lines running across the image that do not belong to anything on screen.</li>
+                    <li><strong>Stretched or spiky geometry</strong>, where models in a game pull into long triangles reaching off into the distance. Usually the processor rather than memory.</li>
+                    <li><strong>Textures that look melted or wrong</strong>, surfaces rendering as the wrong material or flickering between two states.</li>
+                    <li><strong>Snow, static or dotted patterns</strong> over the whole image, which often points at the display path rather than the rendering itself.</li>
+                </ul>
+
+                <p>Where it appears matters as much as what it looks like. Corruption only inside one game is usually that game or its shader cache. Corruption across every application points at drivers or hardware. Corruption visible in the BIOS screen, before any operating system or driver has loaded, is hardware and nothing else — that is the single most useful test on this page.</p>
+
+                <h2>Does It Mean the Card Is Dying?</h2>
+
+                <p>Not always, and the distinction is worth understanding before spending money.</p>
+
+                <p>GPU artifacting is a symptom, not a diagnosis. A perfectly healthy card will show artifacting if it is overheating, if it has been pushed past stable clocks, or if its drivers are corrupted. Fix the underlying condition and the corruption goes completely. That describes a large share of cases, and all of those fixes are free.</p>
+
+                <p>The other group is genuine hardware degradation. Video memory chips fail, solder joints crack after years of heating and cooling, and power delivery components lose the ability to hold a clean voltage under load. These do not improve on their own and will get worse. The difference is that hardware faults tend to appear at low load as well as high, persist after a clean driver reinstall, and show up before Windows starts.</p>
+
+                <p>A useful rule: if the corruption only appears when the card is hot and busy, suspect cooling or clocks first. If it appears at idle, on the desktop, or during boot, suspect hardware.</p>
+
+                <h2>What Actually Causes It</h2>
+
+                <h3>Heat</h3>
+                <p>The most common cause and the easiest to fix. Thermal paste dries and gets squeezed out over years of heat cycling, thermal pads harden, and dust blocks the fins. The card gets hot, the memory or processor becomes unstable, and corruption appears. If your hotspot temperature reads far above your core temperature, contact between the cooler and the die has gone bad.</p>
+
+                <h3>Overclocking, including factory settings</h3>
+                <p>An overclock that was stable last year may not be stable now, because components drift as they age. This includes factory overclocks on cards sold as pre-tuned. Memory overclocks in particular produce classic block-shaped artefacts, because error correction on graphics memory is limited and bad data goes straight to the screen.</p>
+
+                <h3>Drivers and shader cache</h3>
+                <p>Corrupted drivers, or a shader cache that has gone bad after an update, produce corruption that looks exactly like hardware failure. This is why a clean driver reinstall is worth doing before anything else — it costs nothing and rules out a whole category.</p>
+
+                <h3>Video memory failure</h3>
+                <p>Memory chips do fail, and when one does the corruption is usually persistent and progressive. It often starts as occasional blocks under heavy load and becomes constant. This is a hardware fault, but it is a repairable one: the failed chip can be identified and replaced.</p>
+
+                <h3>Cracked solder joints</h3>
+                <p>Underneath the processor and each memory chip is an array of solder balls. Years of expansion and contraction can crack one. The result is an intermittent connection that opens up when the board is hot, which is why some cards work fine cold and corrupt after twenty minutes. Also repairable.</p>
+
+                <h3>Power delivery problems</h3>
+                <p>A failing power stage on the card, or an inadequate or ageing power supply, can leave the card without stable voltage under load. This produces corruption alongside crashes and black screens rather than corruption on its own.</p>
+
+                <h2>Quick Checks Before You Start</h2>
+
+                <p>Five minutes here saves a lot of wasted effort. None of these cost anything.</p>
+
+                <ul class="service-list">
+                    <li><strong>Try a different cable and a different port.</strong> A failing DisplayPort or HDMI cable produces sparkles, dots and flickering that people routinely mistake for a dying card.</li>
+                    <li><strong>Try a different monitor.</strong> Rules out the display itself.</li>
+                    <li><strong>Reseat the card.</strong> Power down, remove it, check the slot for dust, refit it firmly and reconnect the power cables properly.</li>
+                    <li><strong>Check the PCIe power connectors.</strong> Both fully seated, no daisy-chained splitters if the card wants separate cables.</li>
+                    <li><strong>Look at the card.</strong> Clogged fins, a fan not spinning, discoloured components, a burnt smell. Any of those changes the diagnosis immediately.</li>
+                    <li><strong>Watch it during boot.</strong> If corruption is on the BIOS or motherboard splash screen, stop troubleshooting software. That is hardware.</li>
+                </ul>
+
+                <h2>Working Through the Fix</h2>
+
+                <p>In order, cheapest and most likely first.</p>
+
+                <ol>
+                    <li><strong>Reset all clocks to stock.</strong> If you use MSI Afterburner or similar, reset it. If the card has a factory overclock, try underclocking the memory by 100–200 MHz. If the corruption stops, you have found it — an unstable memory clock. Leave it at the lower setting or return the card under warranty if it is new.</li>
+
+                    <li><strong>Clean the driver out properly.</strong> A normal reinstall over the top is not enough. Use Display Driver Uninstaller in Windows safe mode to strip everything, restart, then install the current driver from NVIDIA or AMD directly. Do not use Windows Update's version. This alone resolves a surprising share of cases.</li>
+
+                    <li><strong>Clear the shader cache.</strong> In Windows, Disk Cleanup includes a DirectX shader cache option. NVIDIA and AMD control panels also have their own cache reset. Worth doing if corruption started after a driver or game update.</li>
+
+                    <li><strong>Deal with temperature.</strong> Check readings under load with HWiNFO or GPU-Z, watching both core and hotspot. If the card is running hot, clean the dust out of the fins with compressed air, make sure every fan spins, and check case airflow. If the hotspot sits far above the core, the thermal interface needs redoing — that means stripping the cooler, cleaning off the old paste, and replacing paste and pads.</li>
+
+                    <li><strong>Test the card in another machine.</strong> If you can, this is the decisive test. Corruption follows the card, it is the card. Corruption stays with the original machine, look at the power supply, motherboard slot or system memory instead.</li>
+
+                    <li><strong>Check the power supply.</strong> An ageing or underpowered PSU shows itself under load. If the corruption comes with crashes, reboots or black screens, and the supply is old or marginal for the card, that is a strong suspect.</li>
+
+                    <li><strong>If it persists, it is hardware.</strong> Corruption that survives stock clocks, a clean driver, good temperatures and another machine is a physical fault on the board. That means memory, solder joints or power delivery — and all three are repairable at component level.</li>
+                </ol>
+
+                <h2>How to Test for It Deliberately</h2>
+
+                <p>Reproducing GPU artifacting on demand makes everything easier, and confirms whether a fix actually worked.</p>
+
+                <p>FurMark puts sustained heavy load on the card and will surface heat-related corruption within a few minutes. Run it windowed with a temperature monitor visible so you can watch the readings climb and see whether corruption appears at a particular threshold.</p>
+
+                <p>For memory specifically, a dedicated video memory tester is more informative than a general stress test — it reports actual errors rather than leaving you to judge by eye. A card producing memory errors under test has a hardware fault regardless of what the picture looks like.</p>
+
+                <p>The BIOS test is still the quickest and needs no software. Restart, enter the motherboard BIOS, and look carefully. That screen is drawn by the card with no operating system, no driver and almost no load. Corruption there is conclusive.</p>
+
+                <p>Keep notes while testing: what temperature it starts at, whether it happens at idle, whether it is present at boot. That record is genuinely useful if the card does end up on a bench.</p>
+
+                <h2>When Nothing Will Fix It From Software</h2>
+
+                <p>If you have worked through everything above and the corruption remains, the card has a physical fault. That is not the end of it — the failed part can usually be replaced.</p>
+
+                <p>Failed memory chips can be identified and swapped. Cracked solder joints can be reflowed or reballed. Failed power stage components can be replaced. What cannot be economically repaired is the graphics processor itself degrading internally, and that is genuinely rare compared with the other three.</p>
+
+                <p>Whether it is worth doing comes down to what the card is worth. On a current high-end card, replacing a memory chip costs a fraction of buying another one, particularly with the way prices have moved through 2025 and 2026. On an older mid-range card the sums are less obvious, and sometimes the honest answer is to replace it.</p>
+
+                <h2>Questions</h2>
+
+                <h3>What are the signs of a failing GPU?</h3>
+                <p>Persistent visual corruption that appears at low load and during boot, crashes or black screens under load, temperatures climbing higher than they used to, fan noise that will not settle, and driver crashes that recur after a clean reinstall. Physical signs include discoloured components, a burnt smell, or scorching near the power connectors.</p>
+
+                <h3>What causes GPU artefacts?</h3>
+                <p>Overheating, unstable memory or core clocks, corrupted drivers or shader cache, failing video memory chips, cracked solder joints under the processor or memory, and unstable power delivery from either the card or the power supply. Heat and overclocking are the most common causes and both are fixable without any hardware work.</p>
+
+                <h3>Why is my GPU fragmenting?</h3>
+                <p>Fragmenting usually describes the same thing as artefacting: the image breaking into blocks or fragments. The card is producing incorrect pixel data, generally because memory is unstable from heat or overclocking, or because a memory chip is physically failing. Start by resetting clocks to stock and checking temperatures under load.</p>
+
+                <h3>How to test if a GPU is artifacting?</h3>
+                <p>Run a sustained load test such as FurMark with a temperature monitor visible, and watch for corruption appearing as the card heats up. Use a dedicated video memory tester to detect actual memory errors. Then check the BIOS screen at boot — corruption there confirms hardware, since no drivers are loaded.</p>
+
+                <h3>Is GPU artifacting fixable?</h3>
+                <p>Usually yes. GPU artifacting from heat, clock and driver causes is fixable at no cost by cleaning, repasting, resetting clocks and reinstalling drivers. Failed memory chips, cracked solder joints and power stage faults need component level repair but are also fixable. Only a degrading graphics processor is not economically repairable.</p>
+
+                <h3>Does GPU artifacting happen on laptops too?</h3>
+                <p>Yes, and heat is a bigger factor because cooling is tighter. Laptop graphics chips are soldered directly to the mainboard, so the software fixes are identical but hardware repair is board level work rather than swapping a card. Cleaning vents and repasting resolves a large share of laptop cases.</p>
+
+                <h2>If It Turns Out to Be Hardware</h2>
+
+                <p>We do component level work on graphics cards from our workshop near Castle Hill, including memory chip replacement and joint repair — the two faults that cause most persistent GPU artifacting. The diagnostic is $150 and we waive it in full if you go ahead with the repair, and every repair carries a 12 month warranty. Around nine in ten cards we take on go home working, largely because we decline the ones we do not think will hold — if we think the processor itself is going, we will tell you the card is not worth spending money on.</p>
+
+                <p>See <a href="../services/graphics-card-repair-sydney.html">graphics card repair</a> for what that involves and what it costs, or ring <a href="tel:0400454859">0400 454 859</a>. If the fault is on a laptop mainboard rather than a card, see <a href="../services/board-level-repair.html">board level repair</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner"><div class="container"><h2>Card Still Artefacting?</h2><p>Workshop near Castle Hill, servicing the Hills District, Parramatta and greater Sydney.</p><a href="tel:0400454859" class="cta-phone">0400 454 859</a></div></section>
+
+    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-info"><a href="../" class="logo"><img src="../assets/images/prontositelogo.png" alt="Computer Repairs Pronto" class="logo-img"></a><p>Workshop near Castle Hill, servicing the Hills District and Sydney.</p><div class="footer-contact"><a href="tel:0400454859" style="color: #f97316; font-weight: 600;">0400 454 859</a></div></div><div class="footer-nav"><h4>Services</h4><ul><li><a href="../services/laptop-repairs.html">Laptop Repairs</a></li><li><a href="../services/mac-repairs.html">Mac Repairs</a></li><li><a href="../services/pc-repairs.html">PC Repairs</a></li><li><a href="../services/data-recovery.html">Data Recovery</a></li><li><a href="../services/virus-removal.html">Virus Removal</a></li>
+<li><a href="../services/electronics-repair.html">Electronics Repair</a></li>
+<li><a href="../services/board-level-repair.html">Board Level Repair</a></li>
+<li><a href="../services/graphics-card-repair-sydney.html">Graphics Card Repair</a></li>
+<li><a href="../services/charging-port-repair.html">Charging Port Repair</a></li>
+<li><a href="../services/audio-repair.html">Audio Repair</a></li>
+<li><a href="../services/monitor-repair.html">Monitor Repair</a></li>
+<li><a href="../services/console-repair.html">Console Repair</a></li></ul></div><div class="footer-nav"><h4>Areas</h4><ul><li><a href="../hills-district/castle-hill.html">Castle Hill</a></li><li><a href="../hills-district/baulkham-hills.html">Baulkham Hills</a></li><li><a href="../hills-district/kellyville.html">Kellyville</a></li><li><a href="../hills-district/rouse-hill.html">Rouse Hill</a></li></ul></div><div class="footer-nav"><h4>Contact</h4><ul><li><a href="tel:0400454859">0400 454 859</a></li><li><a href="../contact.html">Contact Page</a></li><li><a href="../about.html">About Us</a></li></ul></div></div><div class="footer-bottom"><p>© 2026 Computer Repairs Pronto. Australian owned and operated.</p><p><a href="../terms.html" style="color: rgba(255,255,255,0.7);">Terms & Conditions</a> | <a href="../privacy.html" style="color: rgba(255,255,255,0.7);">Privacy Policy</a></p></div></div></footer>
+
+<!--
+  SCHEMA — Article + HowTo + FAQPage + BreadcrumbList
+
+  datePublished / dateModified were BRACKETED placeholders in the supplied
+  file. Both are set to 2026-08-02, the date this page goes live and is
+  submitted for indexing. If the deploy slips, update both to the real live
+  date — a datePublished ahead of the live date is treated as unreliable.
+
+  The "Guides" breadcrumb level carries no "item" URL because PRD 4
+  explicitly excludes a /guides/ index page. Pointing at a non-existent
+  directory would emit a 404 from within valid schema.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{
+ "@type":"Article",
+ "@id":"https://www.computerrepairspronto.com.au/guides/gpu-artifacting#article",
+ "headline":"GPU Artifacting: What Causes It and How to Fix It",
+ "description":"What GPU artefacting looks like, what causes it, how to test for it, the fixes worth trying in order, and when the card needs hardware repair.",
+ "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.computerrepairspronto.com.au/guides/gpu-artifacting"},
+ "author":{"@id":"https://www.computerrepairspronto.com.au/#business"},
+ "publisher":{"@id":"https://www.computerrepairspronto.com.au/#business"},
+ "datePublished":"2026-08-02",
+ "dateModified":"2026-08-02"
+},
+{
+ "@type":"LocalBusiness",
+ "@id":"https://www.computerrepairspronto.com.au/#business",
+ "name":"Computer Repairs Pronto",
+ "url":"https://www.computerrepairspronto.com.au/",
+ "telephone":"+61400454859",
+ "foundingDate":"2006",
+ "priceRange":"$$",
+ "address":{"@type":"PostalAddress","addressLocality":"Castle Hill","addressRegion":"NSW","addressCountry":"AU"},
+ "areaServed":{"@type":"City","name":"Sydney"},
+ "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"18:00"}]
+},
+{
+ "@type":"HowTo",
+ "name":"How to fix GPU artefacting",
+ "description":"Work through the causes of GPU artefacting in order, from free software fixes to hardware diagnosis.",
+ "totalTime":"PT1H",
+ "step":[
+  {"@type":"HowToStep","position":1,"name":"Reset clocks to stock","text":"Reset any overclock and try underclocking memory by 100 to 200 MHz. If corruption stops, an unstable memory clock was the cause."},
+  {"@type":"HowToStep","position":2,"name":"Clean reinstall the driver","text":"Use Display Driver Uninstaller in safe mode to strip the existing driver, restart, then install the current driver direct from NVIDIA or AMD."},
+  {"@type":"HowToStep","position":3,"name":"Clear the shader cache","text":"Clear the DirectX shader cache via Disk Cleanup and reset the cache in the NVIDIA or AMD control panel."},
+  {"@type":"HowToStep","position":4,"name":"Address temperature","text":"Check core and hotspot temperatures under load. Clean dust from the fins, confirm all fans spin, and replace thermal paste and pads if the hotspot reads far above the core."},
+  {"@type":"HowToStep","position":5,"name":"Test the card in another machine","text":"If corruption follows the card it is the card. If it stays with the original system, investigate the power supply, slot or system memory."},
+  {"@type":"HowToStep","position":6,"name":"Check the power supply","text":"An ageing or underpowered supply shows itself under load, usually alongside crashes and black screens."},
+  {"@type":"HowToStep","position":7,"name":"Diagnose as hardware","text":"Corruption surviving stock clocks, a clean driver, good temperatures and a second machine indicates a memory, solder joint or power stage fault requiring component level repair."}
+ ]
+},
+{
+ "@type":"FAQPage",
+ "mainEntity":[
+  {"@type":"Question","name":"What are the signs of a failing GPU?","acceptedAnswer":{"@type":"Answer","text":"Persistent visual corruption at low load and during boot, crashes or black screens under load, rising temperatures, fan noise that will not settle, and driver crashes recurring after a clean reinstall. Physical signs include discoloured components, a burnt smell, or scorching near the power connectors."}},
+  {"@type":"Question","name":"What causes GPU artefacts?","acceptedAnswer":{"@type":"Answer","text":"Overheating, unstable memory or core clocks, corrupted drivers or shader cache, failing video memory chips, cracked solder joints, and unstable power delivery. Heat and overclocking are the most common causes and both are fixable without hardware work."}},
+  {"@type":"Question","name":"Why is my GPU fragmenting?","acceptedAnswer":{"@type":"Answer","text":"Fragmenting describes the same thing as artefacting: the image breaking into blocks. The card is producing incorrect pixel data, generally because memory is unstable from heat or overclocking, or because a memory chip is failing. Reset clocks to stock and check temperatures under load."}},
+  {"@type":"Question","name":"How to test if a GPU is artifacting?","acceptedAnswer":{"@type":"Answer","text":"Run a sustained load test such as FurMark with a temperature monitor visible and watch for corruption as the card heats up. Use a dedicated video memory tester to detect memory errors. Then check the BIOS screen at boot, where corruption confirms hardware."}},
+  {"@type":"Question","name":"Is GPU artifacting fixable?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. GPU artifacting from heat, clock and driver causes are fixable at no cost. Failed memory chips, cracked solder joints and power stage faults need component level repair but are also fixable. Only a degrading graphics processor is not economically repairable."}}
+ ]
+},
+{
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://www.computerrepairspronto.com.au/"},
+  {"@type":"ListItem","position":2,"name":"Guides"},
+  {"@type":"ListItem","position":3,"name":"GPU Artifacting","item":"https://www.computerrepairspronto.com.au/guides/gpu-artifacting"}
+ ]
+}]}
+</script>
+</body>
+</html>
