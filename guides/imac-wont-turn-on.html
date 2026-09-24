@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="iMac won't turn on or boot? Checks to try first (SMC and NVRAM resets, torch test, safe mode), what each symptom means, and repair prices from $69.">
+    <meta name="description" content="iMac won't turn on or boot? Checks to try first (SMC and NVRAM resets, torch test, safe mode), what each symptom means, and repair prices from $129.">
     <title>iMac Won't Turn On or Boot: Checks and Repair Costs</title>
     <link rel="canonical" href="https://www.computerrepairspronto.com.au/guides/imac-wont-turn-on">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Computer Repairs Pronto">
     <meta property="og:title" content="iMac Won't Turn On or Boot: Checks and Repair Costs">
-    <meta property="og:description" content="iMac won't turn on or boot? Checks to try first (SMC and NVRAM resets, torch test, safe mode), what each symptom means, and repair prices from $69.">
+    <meta property="og:description" content="iMac won't turn on or boot? Checks to try first (SMC and NVRAM resets, torch test, safe mode), what each symptom means, and repair prices from $129.">
     <meta property="og:url" content="https://www.computerrepairspronto.com.au/guides/imac-wont-turn-on">
     <meta property="og:locale" content="en_AU">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -170,28 +170,28 @@
                 </ol>
 
                 <h2>What the symptoms point to</h2>
-                <div class="table-wrap"><table class="spec-table"><thead><tr><th>Symptom</th><th>Likely causes</th><th>Try next</th></tr></thead><tbody>
-                <tr><td>Nothing at all: no fan, chime or sound</td><td>Power supply or logic board</td><td>Outlet, cable, SMC reset</td></tr>
-                <tr><td>Fans spin, screen black</td><td>Graphics, backlight or logic board</td><td>Torch and Caps Lock tests</td></tr>
-                <tr><td>Chime but no picture</td><td>Backlight or display</td><td>Torch test</td></tr>
-                <tr><td>Flashing question mark folder</td><td>Drive failed or not found, or macOS damaged</td><td>Hold Option; Recovery</td></tr>
-                <tr><td>Stuck on Apple logo or loading bar</td><td>Drive, macOS or an accessory</td><td>Unplug devices; safe mode</td></tr>
-                <tr><td>Turns off by itself or restarts</td><td>Heat, power supply or kernel panic</td><td>Clear vents; note any message</td></tr>
-                <tr><td>Fans flat out after a drive swap</td><td>Missing drive temperature sensor</td><td>See below</td></tr>
+                <div class="table-wrap"><table class="spec-table stack"><thead><tr><th>Symptom</th><th>Likely causes</th><th>Try next</th></tr></thead><tbody>
+                <tr><td data-label="Symptom">Nothing at all: no fan, chime or sound</td><td data-label="Likely causes">Power supply or logic board</td><td data-label="Try next">Outlet, cable, SMC reset</td></tr>
+                <tr><td data-label="Symptom">Fans spin, screen black</td><td data-label="Likely causes">Graphics, backlight or logic board</td><td data-label="Try next">Torch and Caps Lock tests</td></tr>
+                <tr><td data-label="Symptom">Chime but no picture</td><td data-label="Likely causes">Backlight or display</td><td data-label="Try next">Torch test</td></tr>
+                <tr><td data-label="Symptom">Flashing question mark folder</td><td data-label="Likely causes">Drive failed or not found, or macOS damaged</td><td data-label="Try next">Hold Option; Recovery</td></tr>
+                <tr><td data-label="Symptom">Stuck on Apple logo or loading bar</td><td data-label="Likely causes">Drive, macOS or an accessory</td><td data-label="Try next">Unplug devices; safe mode</td></tr>
+                <tr><td data-label="Symptom">Turns off by itself or restarts</td><td data-label="Likely causes">Heat, power supply or kernel panic</td><td data-label="Try next">Clear vents; note any message</td></tr>
+                <tr><td data-label="Symptom">Fans flat out after a drive swap</td><td data-label="Likely causes">Missing drive temperature sensor</td><td data-label="Try next">See below</td></tr>
                 </tbody></table></div>
                 <h3>Flashing question mark folder</h3>
-                <p>The question mark means the iMac cannot find a startup disk it can use. Hold Option at startup to open Startup Manager: if your drive is not listed, it has failed or come loose. On an iMac with its original hard drive that is no surprise. Apple stopped fitting hard drives as standard in August 2020, so most iMac hard drives still in use are six or more years old, and Apple's replacement programs for 1TB Seagate drives in 2009–2011 models and 3TB drives in the <a href="/services/mac-repairs/imac-27-inch-2012-2013">Late 2012 27-inch</a> expired long ago. The cure is an <a href="/services/mac-repairs/imac-ssd-upgrade">SSD upgrade</a>, from $399 with macOS set up and your files moved across if the old drive is readable.</p>
+                <p>The question mark means the iMac cannot find a startup disk it can use. Hold Option at startup to open Startup Manager: if your drive is not listed, it has failed or come loose. On an iMac with its original hard drive that is no surprise. Apple stopped fitting hard drives as standard in August 2020, so most iMac hard drives still in use are six or more years old, and Apple's replacement programs for 1TB Seagate drives in 2009–2011 models and 3TB drives in the <a href="/services/mac-repairs/imac-27-inch-2012-2013">Late 2012 27-inch</a> expired long ago. The cure is an <a href="/services/mac-repairs/imac-ssd-upgrade">SSD upgrade</a>, from $599 with macOS set up and your files moved across if the old drive is readable.</p>
                 <div class="note"><p><strong>Worth knowing:</strong> many 2012–2019 iMacs have a Fusion Drive, where a question mark can also mean one half of the pair has failed. Do not follow online advice to reset the Fusion Drive until your files are off it, because Apple's reset command permanently deletes all data.</p></div>
                 <h3>Stuck on the Apple logo or progress bar</h3>
                 <p>A slow or failing hard drive, an interrupted macOS update or a faulty accessory are the common causes. Unplug everything, give a large update plenty of time to finish, then try safe mode and Recovery as above.</p>
-                <p>One cause is specific to older iMacs. If yours runs a newer macOS installed with OpenCore Legacy Patcher, every macOS update wipes the patcher's root patches, and the patcher's own advice is to switch automatic updates off entirely because a staged update can leave the system broken. If an update has broken a patched iMac, ring us: patching is part of our <a href="/services/mac-repairs/imac-latest-macos">newer macOS on an old iMac</a> service, from $149.</p>
+                <p>One cause is specific to older iMacs. If yours runs a newer macOS installed with OpenCore Legacy Patcher, every macOS update wipes the patcher's root patches, and the patcher's own advice is to switch automatic updates off entirely because a staged update can leave the system broken. If an update has broken a patched iMac, ring us: patching is part of our <a href="/services/mac-repairs/imac-latest-macos">newer macOS on an old iMac</a> service, from $249.</p>
                 <h3>Turns off by itself or keeps restarting</h3>
-                <p>Heat is the first suspect: dust-clogged fans and heatsinks make an iMac shut itself down to protect itself, especially under sustained load. A thermal service and fan clean costs $119 on a 2009–2011 iMac, or $149 from Late 2012 because the glued display must come off. Next is power: a failing power supply can cope at idle and cut out when demand rises. If the iMac restarts and then shows a message that it restarted because of a problem, that is a kernel panic, which can come from software, RAM or the drive, and the report it offers contains useful clues for us.</p>
+                <p>Heat is the first suspect: dust-clogged fans and heatsinks make an iMac shut itself down to protect itself, especially under sustained load. A thermal service and fan clean costs $179 on a 2009–2011 iMac, or $249 from Late 2012 because the glued display must come off. Next is power: a failing power supply can cope at idle and cut out when demand rises. If the iMac restarts and then shows a message that it restarted because of a problem, that is a kernel panic, which can come from software, RAM or the drive, and the report it offers contains useful clues for us.</p>
                 <h3>Fans roaring after a drive replacement</h3>
                 <p>If someone has replaced the hard drive and the fans now run flat out, suspect the drive temperature sensor. On 2009–2010 models the sensor is a cable matched to the drive brand. From 2011, and on 27-inch models from Late 2012 to 2019, Apple's drives report their temperature through custom firmware that retail drives lack, so the fans run at full speed and Apple's hardware test reports a failure. The fix is the right sensor or adapter, not a new fan.</p>
 
                 <h2>The 2009–2011 diagnostic LEDs</h2>
-                <p>The 2009–2011 aluminium iMacs have diagnostic LEDs on the logic board. LED 1 shows trickle power from the power supply: it should glow any time the power cable is connected, whether or not the iMac is switched on. If it is off with a working cable and outlet, the power supply is the usual diagnosis, which is a $299 (21.5-inch) or $379 (27-inch) repair rather than a new logic board. We check it as part of the bench diagnostic. More on these models is on our <a href="/services/mac-repairs/imac-2009-2011">2009–2011 iMac</a> page.</p>
+                <p>The 2009–2011 aluminium iMacs have diagnostic LEDs on the logic board. LED 1 shows trickle power from the power supply: it should glow any time the power cable is connected, whether or not the iMac is switched on. If it is off with a working cable and outlet, the power supply is the usual diagnosis, which is a $399 (21.5-inch) or $479 (27-inch) repair rather than a new logic board. We check it as part of the bench diagnostic. More on these models is on our <a href="/services/mac-repairs/imac-2009-2011">2009–2011 iMac</a> page.</p>
 
                 <h2>When to stop and bring it in</h2>
                 <ul class="service-list">
@@ -204,21 +204,21 @@
                 <p><a class="btn" href="tel:0400454859">Call 0400 454 859</a></p>
 
                 <h2>What the repair is likely to cost</h2>
-                <div class="table-wrap"><table class="spec-table"><thead><tr><th>Likely fault</th><th>Repair</th><th>From</th></tr></thead><tbody>
-                <tr><td>Cause unclear: no power, intermittent, liquid</td><td>Bench diagnostic, credited if you go ahead</td><td>$69</td></tr>
-                <tr><td>Power supply</td><td>PSU replacement, 21.5″ / 27″</td><td>$299 / $379</td></tr>
-                <tr><td>Logic board</td><td>Board-level repair</td><td>$349</td></tr>
-                <tr><td>Logic board beyond repair</td><td>Replacement board, by model</td><td>$499</td></tr>
-                <tr><td>2009–2011 graphics card</td><td>MXM card replacement</td><td>$399</td></tr>
-                <tr><td>Backlight circuit</td><td>Board-level repair</td><td>$349</td></tr>
-                <tr><td>Display panel</td><td>Screen, by model</td><td>$279–$949</td></tr>
-                <tr><td>Failed hard drive or Fusion Drive</td><td>SSD upgrade with macOS setup</td><td>$399 (500GB), $499 (1TB)</td></tr>
-                <tr><td>Overheating</td><td>Thermal service and fan clean</td><td>$119 / $149</td></tr>
+                <div class="table-wrap"><table class="spec-table stack"><thead><tr><th>Likely fault</th><th>Repair</th><th>From</th></tr></thead><tbody>
+                <tr><td data-label="Likely fault">Cause unclear: no power, intermittent, liquid</td><td data-label="Repair">Bench diagnostic, credited if you go ahead</td><td data-label="From">$129</td></tr>
+                <tr><td data-label="Likely fault">Power supply</td><td data-label="Repair">PSU replacement, 21.5″ / 27″</td><td data-label="From">$399 / $479</td></tr>
+                <tr><td data-label="Likely fault">Logic board</td><td data-label="Repair">Board-level repair</td><td data-label="From">$449</td></tr>
+                <tr><td data-label="Likely fault">Logic board beyond repair</td><td data-label="Repair">Replacement board, by model</td><td data-label="From">$699</td></tr>
+                <tr><td data-label="Likely fault">2009–2011 graphics card</td><td data-label="Repair">MXM card replacement</td><td data-label="From">$549</td></tr>
+                <tr><td data-label="Likely fault">Backlight circuit</td><td data-label="Repair">Board-level repair</td><td data-label="From">$449</td></tr>
+                <tr><td data-label="Likely fault">Display panel</td><td data-label="Repair">Screen, by model</td><td data-label="From">$379–$1,199</td></tr>
+                <tr><td data-label="Likely fault">Failed hard drive or Fusion Drive</td><td data-label="Repair">SSD upgrade with macOS setup</td><td data-label="From">$599 (500GB), $699 (1TB)</td></tr>
+                <tr><td data-label="Likely fault">Overheating</td><td data-label="Repair">Thermal service and fan clean</td><td data-label="From">$179 / $249</td></tr>
                 </tbody></table></div>
-                <p>All prices include GST and a 12-month warranty on parts and labour, and the phone quote is free. Whether a repair is worth it depends on the model: a $349 board repair makes sense on a 2019 27-inch worth about $800 privately, and much less on a 2011 27-inch worth $60–$150. On the 2020 27-inch, the only Intel iMac on macOS Tahoe, a repair is usually the better choice over a new $2,399 M4 iMac. Our <a href="/services/mac-repairs/imac-logic-board-repair">logic board, graphics and power supply repair</a> and <a href="/services/mac-repairs/imac-screen-replacement">iMac screen replacement</a> pages explain those jobs, <a href="/guides/imac-repair-cost">iMac repair costs</a> lists every price, and <a href="/guides/old-imac-repair-or-replace">repair or replace an old iMac</a> helps with the decision. For upgrades as well as repairs, start at <a href="/services/mac-repairs/imac">iMac repair and upgrades</a>.</p>
+                <p>All prices include GST and a 12-month warranty on parts and labour, and the phone quote is free. Whether a repair is worth it depends on the model: a $449 board repair makes sense on a 2019 27-inch worth about $800 privately, and much less on a 2011 27-inch worth $60–$150. On the 2020 27-inch, the only Intel iMac on macOS Tahoe, a power supply or board repair is usually the better choice over a new $2,399 M4 iMac. Our <a href="/services/mac-repairs/imac-logic-board-repair">logic board, graphics and power supply repair</a> and <a href="/services/mac-repairs/imac-screen-replacement">iMac screen replacement</a> pages explain those jobs, <a href="/guides/imac-repair-cost">iMac repair costs</a> lists every price, and <a href="/guides/old-imac-repair-or-replace">repair or replace an old iMac</a> helps with the decision. For upgrades as well as repairs, start at <a href="/services/mac-repairs/imac">iMac repair and upgrades</a>.</p>
 
                 <h2>Get your data off first</h2>
-                <p>If the iMac holds photos or documents that exist nowhere else, make the data the priority, before any repair and before any attempt to erase and reinstall. On every Intel iMac up to 2019 the drive is separate from the logic board, so a dead board or power supply does not mean lost files, and if the drive is readable we can copy everything off for $149. From Late 2012 on, the drive sits behind the glued display, so this is a job for the bench, not the kitchen table. The 2020 27-inch is the exception: its SSD is soldered to the logic board, so the board has to work, or be repaired, before the data can be read (see our <a href="/services/mac-repairs/imac-27-inch-5k-2019-2020">27-inch 5K 2019–2020</a> page). Our <a href="/services/data-recovery">data recovery</a> page has the detail.</p>
+                <p>If the iMac holds photos or documents that exist nowhere else, make the data the priority, before any repair and before any attempt to erase and reinstall. On every Intel iMac up to 2019 the drive is separate from the logic board, so a dead board or power supply does not mean lost files, and if the drive is readable we can copy everything off for $249. From Late 2012 on, the drive sits behind the glued display, so this is a job for the bench, not the kitchen table. The 2020 27-inch is the exception: its SSD is soldered to the logic board, so the board has to work, or be repaired, before the data can be read (see our <a href="/services/mac-repairs/imac-27-inch-5k-2019-2020">27-inch 5K 2019–2020</a> page). Our <a href="/services/data-recovery">data recovery</a> page has the detail.</p>
                 <p><a class="btn" href="/contact">Get a quote</a></p>
 
                 <h2>Questions</h2>
@@ -227,13 +227,13 @@
                 <h3>Does unplugging an iMac reset the SMC?</h3>
                 <p>On an Intel iMac, yes, when it is done properly. Apple's method is to shut the iMac down, unplug the power cable, wait 15 seconds, plug it back in, wait five seconds and then press the power button. Pulling the plug for a moment and pushing it straight back in is not the same thing. It is harmless and worth doing before anything else.</p>
                 <h3>Can a power surge stop an iMac turning on?</h3>
-                <p>Yes. A surge from a storm or a faulty appliance can take out the power supply, and sometimes the logic board as well. If your iMac died during a storm or when something else on the same circuit failed, leave it unplugged and tell us when you ring. A power supply replacement is $299 on the 21.5-inch and $379 on the 27-inch.</p>
+                <p>Yes. A surge from a storm or a faulty appliance can take out the power supply, and sometimes the logic board as well. If your iMac died during a storm or when something else on the same circuit failed, leave it unplugged and tell us when you ring. A power supply replacement is $399 on the 21.5-inch and $479 on the 27-inch.</p>
                 <h3>Is it worth fixing an iMac that won't turn on?</h3>
-                <p>It depends on the model and the fault. A power supply or board repair from $299 to $379 is clearly worth it on a 2019 or 2020 27-inch worth $800 to $1,000 privately, and reasonable on a 2017. On a 2011 or 2012–2013 27-inch worth a few hundred dollars at most, it only makes sense if you want to keep that particular machine.</p>
+                <p>It depends on the model and the fault. A power supply or board repair from $399 to $479 is clearly worth it on a 2019 or 2020 27-inch worth $800 to $1,000 privately, but only borderline on a 2017, where it costs about what the machine would sell for. On a 2011 or 2012–2013 27-inch worth a few hundred dollars at most, it only makes sense if you want to keep that particular machine.</p>
                 <h3>Will I lose my files if my iMac won't start?</h3>
                 <p>Usually not. On every Intel iMac from 2009 to 2019 the files are on a separate drive, which survives a failed power supply or logic board. The real risks are a failing hard drive, which gets worse each time you try to start it, and erasing the disk in Recovery. On the 2020 27-inch the SSD is on the logic board, so the board must work first.</p>
                 <h3>How do I get files off an iMac that won't boot?</h3>
-                <p>If the iMac reaches macOS Recovery, you can sometimes copy files to an external drive from there. Target Disk Mode, started by holding T at startup, lets another Mac read the iMac's drive over a Thunderbolt or FireWire cable on models that support it. If neither works, the drive can be read on the bench; with a readable drive, data recovery is $149.</p>
+                <p>If the iMac reaches macOS Recovery, you can sometimes copy files to an external drive from there. Target Disk Mode, started by holding T at startup, lets another Mac read the iMac's drive over a Thunderbolt or FireWire cable on models that support it. If neither works, the drive can be read on the bench; with a readable drive, data recovery is $249.</p>
 
                 <div class="contact-box">
                     <h3>Still not starting?</h3>
@@ -244,7 +244,7 @@
         </div>
     </section>
 
-    <section class="cta-banner"><div class="container"><h2>Get your iMac diagnosed properly</h2><p>Phone quotes are free, and our $69 bench diagnostic for no-power faults is credited to the repair if you go ahead.</p><a href="tel:0400454859" class="cta-phone">0400 454 859</a></div></section>
+    <section class="cta-banner"><div class="container"><h2>Get your iMac diagnosed properly</h2><p>Phone quotes are free, and our $129 bench diagnostic for no-power faults is credited to the repair if you go ahead.</p><a href="tel:0400454859" class="cta-phone">0400 454 859</a></div></section>
 
     <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-info"><a href="../" class="logo"><img src="../assets/images/prontositelogo.png" alt="Computer Repairs Pronto" class="logo-img"></a><p>Workshop near Castle Hill, servicing the Hills District and Sydney.</p><div class="footer-contact"><a href="tel:0400454859" style="color: #f97316; font-weight: 600;">0400 454 859</a></div></div><div class="footer-nav"><h4>Services</h4><ul><li><a href="../services/laptop-repairs.html">Laptop Repairs</a></li><li><a href="../services/mac-repairs.html">Mac Repairs</a></li><li><a href="../services/pc-repairs.html">PC Repairs</a></li><li><a href="../services/data-recovery.html">Data Recovery</a></li><li><a href="../services/virus-removal.html">Virus Removal</a></li>
 <li><a href="../services/electronics-repair.html">Electronics Repair</a></li>
@@ -264,7 +264,7 @@
    "@type": "Article",
    "@id": "https://www.computerrepairspronto.com.au/guides/imac-wont-turn-on#article",
    "headline": "iMac Won't Turn On or Boot: What to Check First",
-   "description": "iMac won't turn on or boot? Checks to try first (SMC and NVRAM resets, torch test, safe mode), what each symptom means, and repair prices from $69.",
+   "description": "iMac won't turn on or boot? Checks to try first (SMC and NVRAM resets, torch test, safe mode), what each symptom means, and repair prices from $129.",
    "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://www.computerrepairspronto.com.au/guides/imac-wont-turn-on"
@@ -360,7 +360,7 @@
      "name": "Can a power surge stop an iMac turning on?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes. A surge from a storm or a faulty appliance can take out the power supply, and sometimes the logic board as well. If your iMac died during a storm or when something else on the same circuit failed, leave it unplugged and tell us when you ring. A power supply replacement is $299 on the 21.5-inch and $379 on the 27-inch."
+      "text": "Yes. A surge from a storm or a faulty appliance can take out the power supply, and sometimes the logic board as well. If your iMac died during a storm or when something else on the same circuit failed, leave it unplugged and tell us when you ring. A power supply replacement is $399 on the 21.5-inch and $479 on the 27-inch."
      }
     },
     {
@@ -368,7 +368,7 @@
      "name": "Is it worth fixing an iMac that won't turn on?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It depends on the model and the fault. A power supply or board repair from $299 to $379 is clearly worth it on a 2019 or 2020 27-inch worth $800 to $1,000 privately, and reasonable on a 2017. On a 2011 or 2012–2013 27-inch worth a few hundred dollars at most, it only makes sense if you want to keep that particular machine."
+      "text": "It depends on the model and the fault. A power supply or board repair from $399 to $479 is clearly worth it on a 2019 or 2020 27-inch worth $800 to $1,000 privately, but only borderline on a 2017, where it costs about what the machine would sell for. On a 2011 or 2012–2013 27-inch worth a few hundred dollars at most, it only makes sense if you want to keep that particular machine."
      }
     },
     {
@@ -384,7 +384,7 @@
      "name": "How do I get files off an iMac that won't boot?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "If the iMac reaches macOS Recovery, you can sometimes copy files to an external drive from there. Target Disk Mode, started by holding T at startup, lets another Mac read the iMac's drive over a Thunderbolt or FireWire cable on models that support it. If neither works, the drive can be read on the bench; with a readable drive, data recovery is $149."
+      "text": "If the iMac reaches macOS Recovery, you can sometimes copy files to an external drive from there. Target Disk Mode, started by holding T at startup, lets another Mac read the iMac's drive over a Thunderbolt or FireWire cable on models that support it. If neither works, the drive can be read on the bench; with a readable drive, data recovery is $249."
      }
     }
    ]

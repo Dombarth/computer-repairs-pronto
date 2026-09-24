@@ -1725,3 +1725,62 @@ a[href^="tel:"] {
   .spec-table { font-size: 0.875rem; }
   .spec-table th, .spec-table td { padding: 8px 10px; }
 }
+
+/* Tables with 3+ columns become labelled cards on phones (no sideways scroll) */
+@media (max-width: 640px) {
+  .table-wrap:has(.stack) {
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+  }
+  .spec-table.stack,
+  .spec-table.stack:has(th:nth-child(4)),
+  .spec-table.stack:has(th:nth-child(5)) { min-width: 0; }
+  .spec-table.stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .spec-table.stack,
+  .spec-table.stack tbody,
+  .spec-table.stack tr,
+  .spec-table.stack td {
+    display: block;
+    width: 100%;
+  }
+  .spec-table.stack tr {
+    margin-bottom: 12px;
+    padding: 4px 0 8px;
+    background: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 8px;
+  }
+  .spec-table.stack tbody tr:last-child { margin-bottom: 0; }
+  .spec-table.stack td {
+    padding: 4px 14px;
+    border-bottom: 0;
+  }
+  .spec-table.stack td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 1px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+  .spec-table.stack tbody td:first-child {
+    padding: 10px 14px 6px;
+    margin-bottom: 4px;
+    font-size: 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--outline);
+    border-radius: 8px 8px 0 0;
+  }
+  .spec-table.stack tbody td:first-child::before { display: none; }
+  .spec-table.stack tr { padding-top: 0; }
+}

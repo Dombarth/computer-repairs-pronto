@@ -143,7 +143,7 @@
     <section class="page-content">
         <div class="container">
             <div class="content-area">
-                <p>On an Intel iMac, the most likely reason for constant slowness and the spinning beach ball is the startup drive: a spinning hard drive, or a Fusion Drive with only a sliver of flash, trying to run a modern version of macOS. After that come too little memory, a nearly full drive and a macOS that is too heavy for the hardware. You can check all of these yourself with tools already on the Mac, and the fixes run from free to a few hundred dollars.</p>
+                <p>On an Intel iMac, the most likely reason for constant slowness and the spinning beach ball is the startup drive: a spinning hard drive, or a Fusion Drive with only a sliver of flash, trying to run a modern version of macOS. After that come too little memory, a nearly full drive and a macOS that is too heavy for the hardware. You can check all of these yourself with tools already on the Mac, and the fixes run from free to several hundred dollars.</p>
                 <p>This guide covers Intel iMacs from Late 2009 to 2020. Work through the checks first, then the causes, most likely first. If you would rather we looked at it, bring it to our workshop near Castle Hill, which serves the Hills District and Western Sydney. We only work on iMacs that are dropped off, and a phone quote is free.</p>
 
                 <h2>Checks you can do yourself</h2>
@@ -172,14 +172,14 @@
 
                 <h3>5. Check the macOS version against the model</h3>
                 <p>Compare the version in About This Mac with the last one Apple supports for your iMac, and the highest the OpenCore Legacy Patcher targets.</p>
-                <div class="table-wrap"><table class="spec-table"><thead><tr><th>iMac</th><th>Apple's last macOS</th><th>Highest via the patcher</th></tr></thead><tbody>
-                <tr><td>2009–2011</td><td>High Sierra 10.13</td><td>Sequoia 15, with non-Metal graphics limits</td></tr>
-                <tr><td>Late 2012 – Late 2013</td><td>Catalina 10.15</td><td>Sequoia 15</td></tr>
-                <tr><td>21.5″ Mid 2014, 5K Late 2014, 5K Mid 2015</td><td>Big Sur 11</td><td>Sequoia 15</td></tr>
-                <tr><td>All Late 2015 models</td><td>Monterey 12</td><td>Sequoia 15</td></tr>
-                <tr><td>All 2017 models</td><td>Ventura 13</td><td>Sequoia 15</td></tr>
-                <tr><td>2019, both sizes</td><td>Sequoia 15</td><td>No gain</td></tr>
-                <tr><td>27″ 2020</td><td>Tahoe 26, the last for Intel</td><td>Not needed</td></tr>
+                <div class="table-wrap"><table class="spec-table stack"><thead><tr><th>iMac</th><th>Apple's last macOS</th><th>Highest via the patcher</th></tr></thead><tbody>
+                <tr><td data-label="iMac">2009–2011</td><td data-label="Apple's last macOS">High Sierra 10.13</td><td data-label="Highest via the patcher">Sequoia 15, with non-Metal graphics limits</td></tr>
+                <tr><td data-label="iMac">Late 2012 – Late 2013</td><td data-label="Apple's last macOS">Catalina 10.15</td><td data-label="Highest via the patcher">Sequoia 15</td></tr>
+                <tr><td data-label="iMac">21.5″ Mid 2014, 5K Late 2014, 5K Mid 2015</td><td data-label="Apple's last macOS">Big Sur 11</td><td data-label="Highest via the patcher">Sequoia 15</td></tr>
+                <tr><td data-label="iMac">All Late 2015 models</td><td data-label="Apple's last macOS">Monterey 12</td><td data-label="Highest via the patcher">Sequoia 15</td></tr>
+                <tr><td data-label="iMac">All 2017 models</td><td data-label="Apple's last macOS">Ventura 13</td><td data-label="Highest via the patcher">Sequoia 15</td></tr>
+                <tr><td data-label="iMac">2019, both sizes</td><td data-label="Apple's last macOS">Sequoia 15</td><td data-label="Highest via the patcher">No gain</td></tr>
+                <tr><td data-label="iMac">27″ 2020</td><td data-label="Apple's last macOS">Tahoe 26, the last for Intel</td><td data-label="Highest via the patcher">Not needed</td></tr>
                 </tbody></table></div>
                 <p>If your iMac runs a newer version than Apple's last one, it has been patched, which matters for cause 4 below. Our model pages go deeper: <a href="/services/mac-repairs/imac-2009-2011">2009–2011</a>, <a href="/services/mac-repairs/imac-21-5-inch-2012-2014">21.5-inch 2012–2014</a>, <a href="/services/mac-repairs/imac-21-5-inch-2015-2019">21.5-inch 2015–2019</a>, <a href="/services/mac-repairs/imac-27-inch-2012-2013">27-inch 2012–2013</a>, <a href="/services/mac-repairs/imac-27-inch-5k-2014-2017">27-inch 5K 2014–2017</a> and <a href="/services/mac-repairs/imac-27-inch-5k-2019-2020">27-inch 5K 2019–2020</a>.</p>
 
@@ -189,39 +189,39 @@
                 <h2>The likely causes, most likely first</h2>
                 <h3>1. A spinning hard drive or a Fusion Drive with too little flash</h3>
                 <p>Most base 21.5-inch iMacs from Late 2012 to 2019 left the factory with a 5400rpm hard drive, and the 27-inch models with a 7200rpm drive or a Fusion Drive. On the 1TB Fusion Drives from Late 2015 onward, the flash part is only 24GB or 32GB, so most of the system still sits on the spinning half. Modern macOS makes it worse. Its APFS file system was built with SSDs in mind, and on a hard disk its bookkeeping fragments until the startup drive is noticeably slower within weeks or months of a clean install, as Howard Oakley of The Eclectic Light Company has documented.</p>
-                <p><strong>Fix:</strong> an <a href="/services/mac-repairs/imac-ssd-upgrade">iMac SSD upgrade</a>, from $399 with a 500GB SSD or $499 with 1TB, including data transfer and macOS setup. Startup, app launches and everyday use are dramatically faster. If your iMac has a hard drive or Fusion Drive, do this before anything else.</p>
+                <p><strong>Fix:</strong> an <a href="/services/mac-repairs/imac-ssd-upgrade">iMac SSD upgrade</a>, from $599 with a 500GB SSD or $699 with 1TB, including data transfer and macOS setup. Startup, app launches and everyday use are dramatically faster. If your iMac has a hard drive or Fusion Drive, do this before anything else.</p>
 
                 <h3>2. Not enough memory</h3>
                 <p>Most iMacs from Late 2012 onward shipped with 8GB, and the 21.5-inch Late 2009 and Mid 2010 with 4GB. If Activity Monitor shows yellow or red memory pressure for long periods, more RAM will help; if it stays green, it will not.</p>
-                <p><strong>Fix:</strong> an <a href="/services/mac-repairs/imac-ram-upgrade">iMac RAM upgrade</a>. On 2009–2011 models and 27-inch models with an access door, 16GB fitted is from $229, or $49 to fit memory you have bought. On the 21.5-inch 2012–2013, 2017 and 2019 it is $299, or $149 extra alongside an SSD. The 21.5-inch Mid 2014 and Late 2015 have soldered memory, so there is no RAM fix for them.</p>
+                <p><strong>Fix:</strong> an <a href="/services/mac-repairs/imac-ram-upgrade">iMac RAM upgrade</a>. On 2009–2011 models and 27-inch models with an access door, 16GB fitted is from $329, or $89 to fit memory you have bought. On the 21.5-inch 2012–2013, 2017 and 2019 it is $449, or $249 extra alongside an SSD. The 21.5-inch Mid 2014 and Late 2015 have soldered memory, so there is no RAM fix for them.</p>
 
                 <h3>3. A nearly full drive</h3>
-                <p>macOS needs free space for swap files, caches and updates, and when the drive fills up, everything slows and updates can fail. <strong>Fix:</strong> free. Empty Downloads and the Bin, delete old iPhone backups, and move large Photos libraries and video files to an external drive. If you need the room long term, a 1TB SSD upgrade is $499.</p>
+                <p>macOS needs free space for swap files, caches and updates, and when the drive fills up, everything slows and updates can fail. <strong>Fix:</strong> free. Empty Downloads and the Bin, delete old iPhone backups, and move large Photos libraries and video files to an external drive. If you need the room long term, a 1TB SSD upgrade is $699.</p>
 
                 <h3>4. A macOS that is too heavy, or too old</h3>
                 <p>Newer is not always faster. The OpenCore Legacy Patcher's own documentation warns that newer operating systems are harder to run and can seem slower on old hardware, with not a lot to be done about it. Patched iMacs have a second trap: every macOS update wipes the patches, and some Sequoia installs need an internet connection to put the graphics patches back. Until they are back there is no graphics acceleration, and the iMac feels dreadful. If a patched iMac slowed suddenly after an update, re-running the patcher is the first thing to try.</p>
-                <p>An old macOS does not usually slow the hardware, but it strands you on old software. High Sierra gets no current Chrome, and Firefox 115 ESR on it gets security fixes only until March 2027. Big Sur and Monterey no longer get Chrome or Microsoft 365 updates. If that is the real problem, <a href="/services/mac-repairs/imac-latest-macos">newer macOS on an old iMac</a> is from $149. We only recommend it once the iMac has an SSD, and it is a compatibility fix, not a speed fix.</p>
+                <p>An old macOS does not usually slow the hardware, but it strands you on old software. High Sierra gets no current Chrome, and Firefox 115 ESR on it gets security fixes only until March 2027. Big Sur and Monterey no longer get Chrome or Microsoft 365 updates. If that is the real problem, <a href="/services/mac-repairs/imac-latest-macos">newer macOS on an old iMac</a> is from $249. We only recommend it once the iMac has an SSD, and it is a compatibility fix, not a speed fix.</p>
 
                 <h3>5. Background indexing after an update or fresh install</h3>
                 <p>After a fresh install, Spotlight rebuilds its index and can keep the processor busy for hours, and the same often happens after a major upgrade or a data transfer. <strong>Fix:</strong> free. Leave the iMac on and awake overnight and judge it the next day. Do not pay anyone to fix a slowdown that is only a day old.</p>
 
                 <h3>6. Heat and dust</h3>
                 <p>Years of dust in the fans and heatsink make an iMac run hot, and a hot Intel processor slows itself down to protect itself. The signs are fans running loudly under light work and kernel_task busy in Activity Monitor. One exception: if the fans went to full speed straight after someone replaced the hard drive, the cause is a missing drive temperature sensor, not dust, and our SSD page explains the fix.</p>
-                <p><strong>Fix:</strong> a thermal service and fan clean, $119 on 2009–2011 models and $149 on 2012 and later, where the display has to come off and go back on with new adhesive.</p>
+                <p><strong>Fix:</strong> a thermal service and fan clean, $179 on 2009–2011 models and $249 on 2012 and later, where the display has to come off and go back on with new adhesive.</p>
 
                 <h3>7. A failing drive</h3>
-                <p>Long freezes, files that will not open, clicking noises or a S.M.A.R.T. status of Failing all point to a drive on its way out. Stop using the iMac for anything important and back up what you can. <strong>Fix:</strong> if the drive can still be read, <a href="/services/data-recovery">data recovery</a> starts from $149, and the replacement SSD from $399 includes moving your data across.</p>
+                <p>Long freezes, files that will not open, clicking noises or a S.M.A.R.T. status of Failing all point to a drive on its way out. Stop using the iMac for anything important and back up what you can. <strong>Fix:</strong> if the drive can still be read, <a href="/services/data-recovery">data recovery</a> starts from $249, and the replacement SSD from $599 includes moving your data across.</p>
 
                 <h2>What each fix costs</h2>
-                <div class="table-wrap"><table class="spec-table"><thead><tr><th>Fix</th><th>From</th><th>Worth it when</th></tr></thead><tbody>
-                <tr><td>Free up space, wait out indexing</td><td>Free</td><td>Always, first</td></tr>
-                <tr><td>SSD upgrade, 500GB</td><td>$399</td><td>Any hard drive or Fusion Drive</td></tr>
-                <tr><td>SSD upgrade, 1TB</td><td>$499</td><td>Large libraries</td></tr>
-                <tr><td>RAM, access-door models, 16GB</td><td>$229, or $49 to fit yours</td><td>Memory pressure yellow or red</td></tr>
-                <tr><td>RAM, 21.5″ display removal, 16GB</td><td>$299, or $149 with an SSD</td><td>Done with an SSD</td></tr>
-                <tr><td>Thermal service and fan clean</td><td>$119 (2009–2011), $149 (2012 on)</td><td>Loud fans and heat</td></tr>
-                <tr><td>Newer macOS via the patcher</td><td>$149</td><td>You need newer apps</td></tr>
-                <tr><td>Data recovery, readable drive</td><td>$149</td><td>Drive failing</td></tr>
+                <div class="table-wrap"><table class="spec-table stack"><thead><tr><th>Fix</th><th>From</th><th>Worth it when</th></tr></thead><tbody>
+                <tr><td data-label="Fix">Free up space, wait out indexing</td><td data-label="From">Free</td><td data-label="Worth it when">Always, first</td></tr>
+                <tr><td data-label="Fix">SSD upgrade, 500GB</td><td data-label="From">$599</td><td data-label="Worth it when">A hard-drive or Fusion iMac you will keep</td></tr>
+                <tr><td data-label="Fix">SSD upgrade, 1TB</td><td data-label="From">$699</td><td data-label="Worth it when">Large libraries</td></tr>
+                <tr><td data-label="Fix">RAM, access-door models, 16GB</td><td data-label="From">$329, or $89 to fit yours</td><td data-label="Worth it when">Memory pressure yellow or red</td></tr>
+                <tr><td data-label="Fix">RAM, 21.5″ display removal, 16GB</td><td data-label="From">$449, or $249 with an SSD</td><td data-label="Worth it when">Done with an SSD</td></tr>
+                <tr><td data-label="Fix">Thermal service and fan clean</td><td data-label="From">$179 (2009–2011), $249 (2012 on)</td><td data-label="Worth it when">Loud fans and heat</td></tr>
+                <tr><td data-label="Fix">Newer macOS via the patcher</td><td data-label="From">$249</td><td data-label="Worth it when">You need newer apps</td></tr>
+                <tr><td data-label="Fix">Data recovery, readable drive</td><td data-label="From">$249</td><td data-label="Worth it when">Drive failing</td></tr>
                 </tbody></table></div>
                 <p>All are starting prices in AUD, GST included, and every job has a 12-month parts and labour warranty. Expect one to two business days for SSD or RAM work when parts are in stock.</p>
                 <p><a class="btn" href="tel:0400454859">Call 0400 454 859</a></p>
@@ -233,12 +233,12 @@
                 <li><strong>Reinstalling macOS on the same hard drive.</strong> It feels better for a while, then the APFS slowdown comes back.</li>
                 <li><strong>A newer macOS to cure slowness.</strong> On old hardware it usually feels slower, not faster.</li>
                 <li><strong>A RAM upgrade for a 21.5-inch Mid 2014 or Late 2015.</strong> The memory is soldered and cannot be changed.</li>
-                <li><strong>Stacking jobs on a 2009–2011 iMac.</strong> A working 27-inch 2011 asks $60 to $150 on Gumtree, so an SSD at $399 already costs more than the machine is worth. If it needs more than the SSD and perhaps the patcher, stop there.</li>
+                <li><strong>Stacking jobs on a 2009–2011 iMac.</strong> A working 27-inch 2011 asks $60 to $150 on Gumtree, so an SSD at $599 costs four to ten times what the machine is worth. Pay for it only if you value this particular iMac for its own sake, and if it needs more than the SSD, stop there.</li>
                 <li><strong>A thermal service when the fans are quiet.</strong> Dust only matters when the iMac is running hot.</li>
                 </ul>
 
                 <h2>When to stop spending</h2>
-                <p>A new 24-inch M4 iMac is $2,399. Against that, private asking prices for working Intel iMacs in September 2026 were around $220 for a 27-inch 2012 or 2013, $400 for a 5K Late 2015, $475 for a 5K 2017, $799 for a 5K 2019 and $999 for a 2020. An SSD at $399 makes sense on most of these. Where a slow iMac also needs a screen, a logic board or a power supply, add up the whole bill and compare it with those numbers. Our guides on <a href="/guides/old-imac-repair-or-replace">whether to repair or replace an old iMac</a> and <a href="/guides/imac-repair-cost">what iMac repairs cost</a> work through it model by model, and our <a href="/services/mac-repairs/imac">iMac repair and upgrades</a> page covers everything else we do.</p>
+                <p>A new 24-inch M4 iMac is $2,399. Against that, private asking prices for working Intel iMacs in September 2026 were around $220 for a 27-inch 2012 or 2013, $400 for a 5K Late 2015, $475 for a 5K 2017, $799 for a 5K 2019 and $999 for a 2020. An SSD at $599 is less than a 5K 2019 fetches, but more than any of the older machines would sell for, so on those it makes sense only if you want to keep the iMac you have; it is still about a quarter of the price of a new one. Where a slow iMac also needs a screen, a logic board or a power supply, add up the whole bill and compare it with those numbers. Our guides on <a href="/guides/old-imac-repair-or-replace">whether to repair or replace an old iMac</a> and <a href="/guides/imac-repair-cost">what iMac repairs cost</a> work through it model by model, and our <a href="/services/mac-repairs/imac">iMac repair and upgrades</a> page covers everything else we do.</p>
 
                 <h2>Questions</h2>
                 <h3>Why does my iMac keep showing the spinning beach ball?</h3>
@@ -246,13 +246,13 @@
                 <h3>Why did my iMac get so slow after a macOS update?</h3>
                 <p>There are three common reasons. Spotlight and other background tasks reindex after big updates, which usually settles within a day. Newer macOS versions ask more of old hardware, especially when running from a hard drive. And on an iMac running a patched macOS, each update removes the OpenCore Legacy Patcher's patches, so graphics acceleration is missing until they are reinstalled. Give it a day, then run the patcher again if it applies.</p>
                 <h3>Is it worth upgrading an old iMac or should I buy a new one?</h3>
-                <p>For a 2017 or 2019 27-inch iMac with a hard drive or Fusion Drive, an SSD from $399 is usually worth it against a new M4 iMac at $2,399. For a 2012 or 2013, it can still be sensible if you are happy on Catalina or a patched Sequoia. For 2009 to 2011 iMacs, where a working 27-inch 2011 asks $60 to $150, spend on the SSD only, if at all. Tahoe is the last macOS for Intel Macs.</p>
+                <p>For a 2017 or 2019 27-inch with a hard drive or Fusion Drive, an SSD from $599 is a quarter of a new M4 iMac at $2,399, though more than a 2017 would sell for. A 2012 or 2013 fetches about $220, so do it only if you want to keep it, on Catalina or a patched Sequoia. For 2009 to 2011 iMacs, where a working 27-inch 2011 asks $60 to $150, spend on the SSD only, if at all. Tahoe is the last macOS for Intel Macs.</p>
                 <h3>Does an iMac slow down with age?</h3>
                 <p>The processor and memory do not wear out and get slower, but plenty around them changes. Hard drives age, and APFS fragments them over time. Dust builds up in the fans and heatsink. macOS and apps get heavier with each version, and websites ask more of the browser. An SSD and a clean-up fix most of that. What no upgrade fixes is the end of new macOS versions for Intel Macs.</p>
                 <h3>Why are my iMac fans so loud when it is slow?</h3>
-                <p>There are two different causes. If the fans ramp up under light work and the iMac feels hot, dust and old thermal paste are likely, and a thermal service ($119 for 2009 to 2011 models, $149 for 2012 and later) sorts it out. If the fans went to full speed right after a drive was replaced, the new drive is not reporting its temperature, and the fix is the correct sensor or fan control software, not a clean.</p>
+                <p>There are two different causes. If the fans ramp up under light work and the iMac feels hot, dust and old thermal paste are likely, and a thermal service ($179 for 2009 to 2011 models, $249 for 2012 and later) sorts it out. If the fans went to full speed right after a drive was replaced, the new drive is not reporting its temperature, and the fix is the correct sensor or fan control software, not a clean.</p>
                 <h3>Can a slow iMac be fixed without losing my files?</h3>
-                <p>Yes, in almost every case. Freeing space, waiting out indexing and adding RAM do not touch your data, and our SSD upgrade includes moving your files, apps and settings to the new drive. The exception is a drive that is already failing: copy what you can to a backup now and stop using it for anything important. If it gets worse, recovering the data costs from $149 as long as the drive can still be read.</p>
+                <p>Yes, in almost every case. Freeing space, waiting out indexing and adding RAM do not touch your data, and our SSD upgrade includes moving your files, apps and settings to the new drive. The exception is a drive that is already failing: copy what you can to a backup now and stop using it for anything important. If it gets worse, recovering the data costs from $249 as long as the drive can still be read.</p>
 
                 <div class="contact-box">
                     <h3>Talk to a technician about your slow iMac</h3>
@@ -263,7 +263,7 @@
         </div>
     </section>
 
-    <section class="cta-banner"><div class="container"><h2>Fix the cause, not the whole computer</h2><p>An SSD upgrade from $399 is the fix that makes the biggest difference to a hard-drive iMac.</p><a href="tel:0400454859" class="cta-phone">0400 454 859</a></div></section>
+    <section class="cta-banner"><div class="container"><h2>Fix the cause, not the whole computer</h2><p>An SSD upgrade from $599 is the fix that makes the biggest difference to a hard-drive iMac.</p><a href="tel:0400454859" class="cta-phone">0400 454 859</a></div></section>
 
     <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-info"><a href="../" class="logo"><img src="../assets/images/prontositelogo.png" alt="Computer Repairs Pronto" class="logo-img"></a><p>Workshop near Castle Hill, servicing the Hills District and Sydney.</p><div class="footer-contact"><a href="tel:0400454859" style="color: #f97316; font-weight: 600;">0400 454 859</a></div></div><div class="footer-nav"><h4>Services</h4><ul><li><a href="../services/laptop-repairs.html">Laptop Repairs</a></li><li><a href="../services/mac-repairs.html">Mac Repairs</a></li><li><a href="../services/pc-repairs.html">PC Repairs</a></li><li><a href="../services/data-recovery.html">Data Recovery</a></li><li><a href="../services/virus-removal.html">Virus Removal</a></li>
 <li><a href="../services/electronics-repair.html">Electronics Repair</a></li>
@@ -379,7 +379,7 @@
      "name": "Is it worth upgrading an old iMac or should I buy a new one?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "For a 2017 or 2019 27-inch iMac with a hard drive or Fusion Drive, an SSD from $399 is usually worth it against a new M4 iMac at $2,399. For a 2012 or 2013, it can still be sensible if you are happy on Catalina or a patched Sequoia. For 2009 to 2011 iMacs, where a working 27-inch 2011 asks $60 to $150, spend on the SSD only, if at all. Tahoe is the last macOS for Intel Macs."
+      "text": "For a 2017 or 2019 27-inch with a hard drive or Fusion Drive, an SSD from $599 is a quarter of a new M4 iMac at $2,399, though more than a 2017 would sell for. A 2012 or 2013 fetches about $220, so do it only if you want to keep it, on Catalina or a patched Sequoia. For 2009 to 2011 iMacs, where a working 27-inch 2011 asks $60 to $150, spend on the SSD only, if at all. Tahoe is the last macOS for Intel Macs."
      }
     },
     {
@@ -395,7 +395,7 @@
      "name": "Why are my iMac fans so loud when it is slow?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "There are two different causes. If the fans ramp up under light work and the iMac feels hot, dust and old thermal paste are likely, and a thermal service ($119 for 2009 to 2011 models, $149 for 2012 and later) sorts it out. If the fans went to full speed right after a drive was replaced, the new drive is not reporting its temperature, and the fix is the correct sensor or fan control software, not a clean."
+      "text": "There are two different causes. If the fans ramp up under light work and the iMac feels hot, dust and old thermal paste are likely, and a thermal service ($179 for 2009 to 2011 models, $249 for 2012 and later) sorts it out. If the fans went to full speed right after a drive was replaced, the new drive is not reporting its temperature, and the fix is the correct sensor or fan control software, not a clean."
      }
     },
     {
@@ -403,7 +403,7 @@
      "name": "Can a slow iMac be fixed without losing my files?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes, in almost every case. Freeing space, waiting out indexing and adding RAM do not touch your data, and our SSD upgrade includes moving your files, apps and settings to the new drive. The exception is a drive that is already failing: copy what you can to a backup now and stop using it for anything important. If it gets worse, recovering the data costs from $149 as long as the drive can still be read."
+      "text": "Yes, in almost every case. Freeing space, waiting out indexing and adding RAM do not touch your data, and our SSD upgrade includes moving your files, apps and settings to the new drive. The exception is a drive that is already failing: copy what you can to a backup now and stop using it for anything important. If it gets worse, recovering the data costs from $249 as long as the drive can still be read."
      }
     }
    ]
