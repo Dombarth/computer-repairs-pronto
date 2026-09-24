@@ -1040,6 +1040,14 @@ h6, .heading6 { font-size: 1rem; }
   text-decoration-color: var(--orange-dark);
 }
 
+/* Buttons inside content keep white text (the content link colour above
+   otherwise turns button text orange on an orange background) */
+.content-area a.btn,
+.content-area a.btn:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
 /* Service List */
 .service-list {
   list-style: none;
