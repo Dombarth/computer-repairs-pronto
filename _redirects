@@ -18,10 +18,8 @@ https://computerrepairspronto.com.au/*  https://www.computerrepairspronto.com.au
 /guides/gpu-artefacting            /guides/gpu-artifacting                301
 
 # Old URLs from the previous site that still earn Search Console impressions.
-# /parramatta is a live page again (parramatta.html), and the old /blacktown
-# page points to it. Old data recovery pages go to the service page.
-/blacktown                           /parramatta               301
-/blacktown/*                         /parramatta               301
+# /parramatta and /blacktown are live pages again (parramatta.html,
+# blacktown.html). Old data recovery pages go to the service page.
 /data-recovery-castle-hill           /services/data-recovery   301
 /data-recovery-castle-hill/*         /services/data-recovery   301
 /data-recovery-north-sydney-nsw      /services/data-recovery   301
