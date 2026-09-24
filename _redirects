@@ -17,13 +17,15 @@ https://computerrepairspronto.com.au/*  https://www.computerrepairspronto.com.au
 /guides/graphics-card-artefacting  /guides/gpu-artifacting                301
 /guides/gpu-artefacting            /guides/gpu-artifacting                301
 
-# Old suburb pages from the previous site (404 since the rebuild; still
-# showing in Search Console for "computer repairs parramatta/blacktown").
-# The homepage is the general computer repair page that names both areas.
-/parramatta      /  301
-/parramatta/*    /  301
-/blacktown       /  301
-/blacktown/*     /  301
+# Old URLs from the previous site that still earn Search Console impressions.
+# /parramatta is a live page again (parramatta.html), and the old /blacktown
+# page points to it. Old data recovery pages go to the service page.
+/blacktown                           /parramatta               301
+/blacktown/*                         /parramatta               301
+/data-recovery-castle-hill           /services/data-recovery   301
+/data-recovery-castle-hill/*         /services/data-recovery   301
+/data-recovery-north-sydney-nsw      /services/data-recovery   301
+/data-recovery-north-sydney-nsw/*    /services/data-recovery   301
 
 # Catch-all for 404
 /*  /404.html  404
