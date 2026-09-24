@@ -1534,3 +1534,253 @@ a[href^="tel:"] {
 @media (prefers-reduced-motion: reduce) {
   .gpu-fill { transition: none; }
 }
+
+/* ==========================================================================
+   iMac pages (Sept 2026): tables, notes, model picker
+   ========================================================================== */
+
+.table-wrap {
+  margin: 20px 0 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--outline);
+  border-radius: 8px;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.spec-table:has(th:nth-child(4)) { min-width: 520px; }
+.spec-table:has(th:nth-child(5)) { min-width: 640px; }
+
+.spec-table th,
+.spec-table td {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--outline);
+  color: var(--text);
+}
+
+.spec-table thead th {
+  background: var(--surface);
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.spec-table tbody tr:last-child td { border-bottom: 0; }
+
+.spec-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.note {
+  margin: 24px 0;
+  padding: 16px 20px;
+  background: #fff7ed;
+  border-left: 4px solid var(--orange);
+  border-radius: 0 8px 8px 0;
+}
+
+.content-area .note p { margin-bottom: 0; }
+.content-area .note p + p { margin-top: 12px; }
+
+/* Model picker ------------------------------------------------------------ */
+
+.imac-tool {
+  margin: 20px 0 32px;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: 12px;
+}
+
+.content-area .imac-step {
+  margin: 0 0 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.imac-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.imac-chip {
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid var(--outline);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.imac-chip:hover { border-color: var(--primary); }
+
+.imac-chip[aria-pressed="true"] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.imac-chip:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.imac-hint {
+  padding: 10px 0;
+  font-size: 0.9375rem;
+  color: var(--text-light);
+}
+
+.imac-card {
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--outline);
+  border-radius: 10px;
+}
+
+.content-area .imac-card h3 {
+  margin: 0 0 4px;
+  font-size: 1.125rem;
+}
+
+.content-area .imac-id {
+  margin-bottom: 14px;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.imac-facts {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 10px 16px;
+  margin: 0 0 18px;
+}
+
+.imac-facts dt {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.imac-facts dd {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.content-area .imac-sub {
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.content-area ul.imac-jobs {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.content-area .imac-jobs li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--outline);
+}
+
+.imac-jobs li span {
+  font-weight: 700;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.content-area .imac-skip { font-size: 0.9375rem; }
+.content-area .imac-more { margin-bottom: 0; font-weight: 600; }
+
+@media (max-width: 560px) {
+  .imac-tool { padding: 16px; }
+  .imac-card { padding: 16px; }
+  .imac-facts { grid-template-columns: 1fr; gap: 2px 0; }
+  .imac-facts dd { margin-bottom: 10px; }
+  .spec-table { font-size: 0.875rem; }
+  .spec-table th, .spec-table td { padding: 8px 10px; }
+}
+
+/* Tables with 3+ columns become labelled cards on phones (no sideways scroll) */
+@media (max-width: 640px) {
+  .table-wrap:has(.stack) {
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+  }
+  .spec-table.stack,
+  .spec-table.stack:has(th:nth-child(4)),
+  .spec-table.stack:has(th:nth-child(5)) { min-width: 0; }
+  .spec-table.stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .spec-table.stack,
+  .spec-table.stack tbody,
+  .spec-table.stack tr,
+  .spec-table.stack td {
+    display: block;
+    width: 100%;
+  }
+  .spec-table.stack tr {
+    margin-bottom: 12px;
+    padding: 4px 0 8px;
+    background: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 8px;
+  }
+  .spec-table.stack tbody tr:last-child { margin-bottom: 0; }
+  .spec-table.stack td {
+    padding: 4px 14px;
+    border-bottom: 0;
+  }
+  .spec-table.stack td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 1px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+  .spec-table.stack tbody td:first-child {
+    padding: 10px 14px 6px;
+    margin-bottom: 4px;
+    font-size: 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--outline);
+    border-radius: 8px 8px 0 0;
+  }
+  .spec-table.stack tbody td:first-child::before { display: none; }
+  .spec-table.stack tr { padding-top: 0; }
+}
