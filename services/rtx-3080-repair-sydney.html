@@ -216,6 +216,8 @@
                 <tr><td data-label="What you see">Fine on the desktop, crashes in games</td><td data-label="Where diagnosis usually starts">Memory errors when hot, power delivery under load, cooling</td><td data-label="Typical repair">From $330 (thermal service)</td></tr>
                 <tr><td data-label="What you see">Code 43 in Device Manager</td><td data-label="Where diagnosis usually starts">Memory, firmware, sometimes software</td><td data-label="Typical repair">From $330</td></tr>
                 <tr><td data-label="What you see">One display output dead</td><td data-label="Where diagnosis usually starts">The port or its output circuitry</td><td data-label="Typical repair">From $370</td></tr>
+                <tr><td data-label="What you see">Not detected after the PC was moved or the card refitted</td><td data-label="Where diagnosis usually starts">Small components knocked off near the PCIe connector</td><td data-label="Typical repair">From $370</td></tr>
+                <tr><td data-label="What you see">Loud fans, high hotspot temperature, grinding noise</td><td data-label="Where diagnosis usually starts">Thermal paste, cooler contact, fan bearings</td><td data-label="Typical repair">From $330</td></tr>
                 <tr><td data-label="What you see">Burnt smell, scorch marks, parts knocked off</td><td data-label="Where diagnosis usually starts">Power stages, connectors, passive components, traces</td><td data-label="Typical repair">From $370</td></tr>
                 </tbody></table></div>
 
@@ -470,9 +472,27 @@
 
                 <h2 id="scenarios">Typical RTX 3080 Repair Scenarios</h2>
 
-                <p><strong>These are the ways RTX 3080 faults most often present, what diagnosis usually finds and what the repair involves.</strong> They are fault patterns, not a promise about your card: every card is diagnosed on its own and quoted on what is found.</p>
+                <p><strong>These are common ways RTX 3080 faults present, what diagnosis usually finds and what the repair involves.</strong> They are fault patterns, not a promise about your card: every card is diagnosed on its own and quoted on what is found.</p>
 
-                <div class="imac-card case-card">
+                <nav class="page-toc" aria-label="Find your symptom">
+                <p>Find your symptom</p>
+                <ul>
+                <li><a href="#s-artefacts-warm">Artefacts once the card warms up</a></li>
+                <li><a href="#s-switches-off">PC switches off at start-up</a></li>
+                <li><a href="#s-psu-failure">Dead after the power supply failed</a></li>
+                <li><a href="#s-black-screens">Black screens under load that come and go</a></li>
+                <li><a href="#s-moved">Not detected after moving the PC</a></li>
+                <li><a href="#s-bios-update">No display after a BIOS update</a></li>
+                <li><a href="#s-one-output">One HDMI or DisplayPort output dead</a></li>
+                <li><a href="#s-second-hand">Second-hand card crashing after 20 minutes</a></li>
+                <li><a href="#s-hotspot">Hotspot far above GPU temperature</a></li>
+                <li><a href="#s-fan">Fan grinding or jumping to full speed</a></li>
+                <li><a href="#s-code43-not-card">Code 43 that is not the card</a></li>
+                <li><a href="#s-code43-intermittent">Code 43 that comes and goes</a></li>
+                </ul>
+                </nav>
+
+                <div class="imac-card case-card" id="s-artefacts-warm">
                 <h3>Artefacts in games that get worse as the card warms up</h3>
                 <dl class="imac-facts">
                 <dt>What you see</dt><dd>The desktop looks normal, but after ten or twenty minutes in a game, coloured blocks and flickering textures appear, followed by a crash.</dd>
@@ -483,7 +503,7 @@
                 </dl>
                 </div>
 
-                <div class="imac-card case-card">
+                <div class="imac-card case-card" id="s-switches-off">
                 <h3>The computer switches off the moment it starts</h3>
                 <dl class="imac-facts">
                 <dt>What you see</dt><dd>With the card fitted, the computer powers on for a fraction of a second and shuts off. Without the card, the computer runs.</dd>
@@ -494,7 +514,37 @@
                 </dl>
                 </div>
 
-                <div class="imac-card case-card">
+                <div class="imac-card case-card" id="s-psu-failure">
+                <h3>Dead after the power supply failed</h3>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>The computer's power supply failed, and now the computer will not start with the card fitted, or starts but shows no sign of the card.</dd>
+                <dt>What diagnosis usually finds</dt><dd>A short on the 12V input, commonly a failed input capacitor or power stage. Whatever took out the power supply can damage more than one part on the card, so every rail is checked, not just the first fault found.</dd>
+                <dt>The repair</dt><dd>The failed parts are replaced and the card is brought up on a current-limited supply before it is given full power.</dd>
+                <dt>Price and bench time</dt><dd>From $430, usually three to seven business days</dd>
+                </dl>
+                </div>
+
+                <div class="imac-card case-card" id="s-black-screens">
+                <h3>Black screens under load that come and go</h3>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>The screen goes black in demanding games while the fans keep running, sometimes with sound carrying on for a few seconds. It does not happen every session.</dd>
+                <dt>What diagnosis usually finds</dt><dd>A power stage that drops out once it heats up, or a poor solder joint on a power input connector causing a voltage drop under load. The fault has to be caught in the act, so the card is run under load while its rails are monitored.</dd>
+                <dt>The repair</dt><dd>The failing power stage is replaced, or the connector joints are reworked, and the rail is checked again under full load.</dd>
+                <dt>Price and bench time</dt><dd>From $370 for connector work or $430 for a power stage. Intermittent faults take longer on the bench because they must be reproduced first.</dd>
+                </dl>
+                </div>
+
+                <div class="imac-card case-card" id="s-moved">
+                <h3>Not detected after the PC was moved or the card was refitted</h3>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>No display, and the motherboard's VGA warning light stays on, starting straight after the computer was moved or the card was taken out and put back.</dd>
+                <dt>What diagnosis usually finds</dt><dd>Small surface-mount components knocked off or cracked, often near the PCIe edge connector, where they are easily caught when a card is handled.</dd>
+                <dt>The repair</dt><dd>The missing or damaged parts are replaced, the area is checked under magnification, and the card's PCIe link is confirmed at its full width and speed.</dd>
+                <dt>Price and bench time</dt><dd>From $370</dd>
+                </dl>
+                </div>
+
+                <div class="imac-card case-card" id="s-bios-update">
                 <h3>Fans spin and nothing appears after a BIOS update</h3>
                 <dl class="imac-facts">
                 <dt>What you see</dt><dd>A firmware update was interrupted, or the wrong file was used. The card now powers its fans but shows nothing, and the computer may not detect it.</dd>
@@ -504,7 +554,17 @@
                 </dl>
                 </div>
 
-                <div class="imac-card case-card">
+                <div class="imac-card case-card" id="s-one-output">
+                <h3>One HDMI or DisplayPort output dead, the others fine</h3>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>One output gives no signal on any monitor or cable, often after a cable was pulled out at an angle or the computer was knocked. The other outputs work.</dd>
+                <dt>What diagnosis usually finds</dt><dd>A damaged connector, or solder joints cracked between the connector and the board. Less often, a fault in the circuitry behind that output.</dd>
+                <dt>The repair</dt><dd>The connector is replaced, damaged pads are repaired, and every output is tested afterwards.</dd>
+                <dt>Price and bench time</dt><dd>From $370</dd>
+                </dl>
+                </div>
+
+                <div class="imac-card case-card" id="s-second-hand">
                 <h3>A second-hand card that crashes after twenty minutes</h3>
                 <dl class="imac-facts">
                 <dt>What you see</dt><dd>A used 3080, often an ex-mining card, that runs loud and hot and crashes in longer gaming sessions.</dd>
@@ -514,12 +574,42 @@
                 </dl>
                 </div>
 
-                <div class="imac-card case-card">
+                <div class="imac-card case-card" id="s-hotspot">
+                <h3>Hotspot temperature far above the GPU temperature</h3>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>The fans are loud all the time. The GPU temperature looks reasonable, but the hotspot reading in a tool such as HWiNFO climbs quickly and clock speeds drop.</dd>
+                <dt>What diagnosis usually finds</dt><dd>Thermal paste that has dried or spread unevenly, leaving poor contact between the cooler and the GPU. The pads are checked at the same time.</dd>
+                <dt>The repair</dt><dd>The cooler is removed and cleaned, the GPU repasted, pads renewed where needed, and the cooler refitted with even mounting pressure.</dd>
+                <dt>Price and bench time</dt><dd>From $330, usually one to two business days</dd>
+                </dl>
+                </div>
+
+                <div class="imac-card case-card" id="s-fan">
+                <h3>A fan grinding, rattling or jumping to full speed</h3>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>A grinding or rattling noise, often worse at low speed or once the card is warm, or a fan that suddenly runs flat out when temperatures are normal.</dd>
+                <dt>What diagnosis usually finds</dt><dd>A worn fan bearing, or a fan whose speed signal keeps dropping out, which can make the card spin its fans up to protect itself.</dd>
+                <dt>The repair</dt><dd>The faulty fan is replaced with one that matches the cooler, and the heatsink is cleaned while it is apart.</dd>
+                <dt>Price and bench time</dt><dd>Quoted per card, because fans differ between models; usually one to two business days</dd>
+                </dl>
+                </div>
+
+                <div class="imac-card case-card" id="s-code43-not-card">
                 <h3>Code 43 that turns out not to be the card</h3>
                 <dl class="imac-facts">
                 <dt>What you see</dt><dd>Windows reports Code 43 and the card will not run games.</dd>
                 <dt>What diagnosis usually finds</dt><dd>On the bench the card is detected normally, passes memory testing, holds every rail and runs a sustained load without fault. The problem is in the original computer: a driver installation, a motherboard setting or the power supply.</dd>
                 <dt>The outcome</dt><dd>No repair is carried out. You pay the $150 diagnostic and any return postage, and you get the test results and the next things to check in your own system.</dd>
+                </dl>
+                </div>
+
+                <div class="imac-card case-card" id="s-code43-intermittent">
+                <h3>Code 43 that comes and goes</h3>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>Some starts are normal, others show Code 43 in Device Manager. A clean driver reinstall only helps for a while.</dd>
+                <dt>What diagnosis usually finds</dt><dd>Memory that errors only at some temperatures, a power rail that is marginal at start-up, or occasionally a poor solder joint on the firmware chip. Catching it takes several cold starts and long load runs.</dd>
+                <dt>The repair</dt><dd>Depends on the cause: a memory chip, power work, or reworking the firmware chip's joints.</dd>
+                <dt>Price and bench time</dt><dd>From $330, quoted once the cause is found</dd>
                 </dl>
                 </div>
 
