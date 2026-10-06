@@ -17,6 +17,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css?v=20260925b">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <style>
+        .content-area h2[id], .content-area .case-card { scroll-margin-top: calc(var(--hdr, 310px) + 16px); }
+        .page-toc { margin: 24px 0 32px; padding: 16px 20px; background: var(--surface); border: 1px solid var(--outline); border-radius: 8px; }
+        .content-area .page-toc p { margin: 0 0 8px; font-weight: 700; color: var(--dark); }
+        .content-area .page-toc ul { columns: 2 220px; column-gap: 32px; margin: 0; padding-left: 20px; }
+        .content-area .page-toc li { margin-bottom: 6px; break-inside: avoid; font-size: 0.9375rem; }
+        @media (max-width: 560px) {
+            .page-toc { padding: 14px 16px; }
+            .content-area .page-toc ul { columns: 2 130px; column-gap: 16px; padding-left: 16px; }
+            .content-area .page-toc li { font-size: 0.875rem; }
+        }
+        .case-card { margin-bottom: 16px; }
+        .case-card .imac-facts { margin-bottom: 0; }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -145,9 +159,9 @@
             <div class="content-area">
                 <p class="breadcrumbs" style="font-size:0.875rem;color:#64748b;margin-bottom:24px;"><a href="/">Home</a> › <a href="/services/">Services</a> › <a href="/services/graphics-card-repair-sydney">GPU &amp; Graphics Card Repair Sydney</a> › RTX 3080 Repair Sydney</p>
 
-                <p>Computer Repairs Pronto repairs RTX 3080 graphics cards at board level in Sydney, for faults including no display, artefacting, GDDR6X memory failures, power-stage failures and short circuits. Each card is diagnosed before anything is replaced, so the quote is based on the circuit or component that has actually failed rather than on the symptom.</p>
+                <p><strong>Computer Repairs Pronto repairs RTX 3080 graphics cards at board level on our Sydney repair bench, for faults including no display, artefacting, GDDR6X memory failures, power-stage failures and short circuits.</strong> Each card is diagnosed before anything is replaced, so the quote is based on the part that has actually failed rather than on the symptom.</p>
 
-                <p>Sydney customers can bring the card to our workshop near Castle Hill by arrangement. Everywhere else in Australia, the card can be posted to the same bench through our <a href="/services/graphics-card-repair-australia">mail-in GPU repair service</a>. Repairs start from $330, the $150 diagnostic is waived if you go ahead, and every repair carries a 12-month warranty on parts and labour. This page covers the RTX 3080 specifically; our <a href="/services/graphics-card-repair-sydney">graphics card repair in Sydney</a> page covers every other card.</p>
+                <p>Sydney customers can bring the card to our workshop near Castle Hill by arrangement. Everywhere else in Australia, the card can be posted to the same bench through our <a href="/services/graphics-card-repair-australia">mail-in GPU repair service</a>. Every other card model is covered on our <a href="/services/graphics-card-repair-sydney">graphics card repair in Sydney</a> page.</p>
 
                 <div class="table-wrap"><table class="spec-table"><thead><tr><th colspan="2">RTX 3080 repair at a glance</th></tr></thead><tbody>
                 <tr><td>Service</td><td>Component-level diagnosis and repair of RTX 3080 graphics cards</td></tr>
@@ -155,16 +169,45 @@
                 <tr><td>Common faults</td><td>No display, artefacting, GDDR6X memory, power stages and MOSFETs, short circuits, crashes under load, hardware Code 43, firmware</td></tr>
                 <tr><td>Diagnostic</td><td>$150, waived if you go ahead with the repair</td></tr>
                 <tr><td>Repairs</td><td>From $330, depending on the fault</td></tr>
-                <tr><td>Warranty</td><td>12 months, parts and labour</td></tr>
+                <tr><td>Bench time</td><td>1–2 business days (thermal, firmware), 3–7 (power, memory), 5–10 (reball, physical damage)</td></tr>
+                <tr><td>Warranty</td><td>12 months on the parts replaced, for the same fault</td></tr>
                 <tr><td>Location</td><td>Workshop near Castle Hill, Sydney NSW, drop-off by arrangement</td></tr>
                 <tr><td>Mail-in</td><td>Australia-wide; you choose the postage service and cover</td></tr>
                 </tbody></table></div>
 
                 <p><a class="btn" href="#gpu-enquiry">Request an RTX 3080 repair assessment</a></p>
 
-                <h2>RTX 3080 Faults We Diagnose and Repair</h2>
+                <nav class="page-toc" aria-label="On this page">
+                <p>On this page</p>
+                <ul>
+                <li><a href="#faults">Faults we repair</a></li>
+                <li><a href="#no-display">No display</a></li>
+                <li><a href="#artefacting">Artefacting and VRAM</a></li>
+                <li><a href="#gddr6x-memory">GDDR6X memory repair</a></li>
+                <li><a href="#power-stage">Power stage and MOSFET repair</a></li>
+                <li><a href="#short-circuit">Short circuits</a></li>
+                <li><a href="#crashing">Crashing under load</a></li>
+                <li><a href="#code-43">Code 43</a></li>
+                <li><a href="#10gb-vs-12gb">10GB vs 12GB</a></li>
+                <li><a href="#founders-edition">Founders Edition and partner cards</a></li>
+                <li><a href="#diagnosis">How we diagnose</a></li>
+                <li><a href="#repairable">Can it be repaired?</a></li>
+                <li><a href="#not-economical">When repair is not economical</a></li>
+                <li><a href="#cost">Repair cost</a></li>
+                <li><a href="#worth-repairing">Is it worth repairing?</a></li>
+                <li><a href="#turnaround">Turnaround</a></li>
+                <li><a href="#after-repair">After the repair and warranty</a></li>
+                <li><a href="#scenarios">Typical repair scenarios</a></li>
+                <li><a href="#sydney">Sydney drop-off</a></li>
+                <li><a href="#interstate">Interstate mail-in</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#gpu-enquiry">Request an assessment</a></li>
+                </ul>
+                </nav>
 
-                <p>Most RTX 3080 faults fall into four groups: power delivery, memory, firmware and physical damage. The symptom tells you which group to look in first. It rarely tells you which component has failed, and a few symptoms point in the wrong direction altogether.</p>
+                <h2 id="faults">RTX 3080 Faults We Diagnose and Repair</h2>
+
+                <p><strong>Most RTX 3080 faults fall into four groups: power delivery, memory, firmware and physical damage.</strong> The symptom tells you which group to look in first. It rarely tells you which component has failed, and a few symptoms point in the wrong direction altogether.</p>
 
                 <div class="table-wrap"><table class="spec-table stack"><thead><tr><th>What you see</th><th>Where diagnosis usually starts</th><th>Typical repair</th></tr></thead><tbody>
                 <tr><td data-label="What you see">Fans spin, no picture</td><td data-label="Where diagnosis usually starts">Core and memory power rails, firmware, output circuitry</td><td data-label="Typical repair">From $330 (firmware) or from $430 (power stage)</td></tr>
@@ -178,63 +221,112 @@
 
                 <p>These are starting points, not verdicts. Artefacts can come from the supply that feeds the memory rather than the memory itself, and what looks like a driver problem can be a memory chip that only fails once it warms up. That is why the card is diagnosed before it is quoted.</p>
 
-                <h2>RTX 3080 No Display Repair</h2>
+                <h2 id="no-display">RTX 3080 No Display Repair</h2>
 
-                <p>An RTX 3080 with no display can usually be repaired as long as the GPU core itself is healthy. The common causes are a failed power stage on the core or memory supply, corrupted firmware, or a fault in the circuitry behind the display outputs. The first useful question is whether the computer detects the card at all.</p>
+                <p><strong>An RTX 3080 with no display can usually be repaired as long as the GPU core itself is healthy.</strong> The common causes are a failed power stage on the core or memory supply, corrupted firmware, or a fault in the circuitry behind the display outputs. The first useful question is whether the computer detects the card at all.</p>
 
-                <p>If Windows or the motherboard can see the card but the screen stays black, the card's power is at least partly up, which points towards firmware, memory or the output side. If the card is not detected, the fault is usually earlier in the chain: one of the power rails is not coming up, or something on the PCIe interface (the gold edge connector and the circuitry behind it) is damaged.</p>
+                <div class="table-wrap"><table class="spec-table"><thead><tr><th>Does the computer detect the card?</th><th>What it usually points to</th></tr></thead><tbody>
+                <tr><td>Yes, but the screen stays black</td><td>The card's power is at least partly up. Look at firmware, memory or the display output side.</td></tr>
+                <tr><td>No</td><td>A fault earlier in the chain: one of the power rails is not coming up, or the PCIe interface (the gold edge connector and the circuitry behind it) is damaged.</td></tr>
+                </tbody></table></div>
 
                 <p>Spinning fans prove less than people expect. The fans run from the 12V input through a simple fan controller, so they can spin on a card whose core supply has failed completely. A "rail" here simply means one regulated voltage supply on the card: the GPU core has its own, the memory has its own, and several smaller rails run the rest of the board.</p>
 
-                <h2>RTX 3080 Artefacting and VRAM Problems</h2>
+                <h2 id="artefacting">RTX 3080 Artefacting and VRAM Problems</h2>
 
-                <p>Artefacting on an RTX 3080, meaning coloured blocks, lines, flickering or corrupted textures, most often points to the GDDR6X video memory (VRAM). It can also come from the memory's power supply, from memory running too hot, or from poor contact between the GPU and the circuit board.</p>
+                <p><strong>Artefacting on an RTX 3080, meaning coloured blocks, lines, flickering or corrupted textures, most often points to the GDDR6X video memory (VRAM).</strong> It can also come from the memory's power supply, from memory running too hot, or from poor contact between the GPU and the circuit board. When the artefacts appear narrows it down:</p>
 
-                <p>When the artefacts appear matters. Corruption on the motherboard's start-up screen, before Windows or any driver has loaded, is a hardware fault. Artefacts that only appear in games, and get worse as the card warms up, suggest memory that is marginal at temperature or a joint that opens up as the board expands. Artefacts that started straight after a driver update and also appear on a second card are not the card.</p>
+                <div class="table-wrap"><table class="spec-table"><thead><tr><th>When the artefacts appear</th><th>What it usually means</th></tr></thead><tbody>
+                <tr><td>On the start-up screen, before Windows or any driver loads</td><td>A hardware fault on the card</td></tr>
+                <tr><td>Only in games, getting worse as the card warms up</td><td>Memory that is marginal at temperature, or a joint that opens up as the board expands</td></tr>
+                <tr><td>Straight after a driver update, and also with a second card</td><td>Not the card: the driver or the rest of the system</td></tr>
+                </tbody></table></div>
 
                 <p>Our <a href="/guides/gpu-artifacting">GPU artefacting guide</a> covers the checks worth doing at home before you send anything.</p>
 
-                <h2>RTX 3080 GDDR6X Memory Repair</h2>
+                <h2 id="gddr6x-memory">RTX 3080 GDDR6X Memory Repair</h2>
 
-                <p>Failed GDDR6X memory on an RTX 3080 can be replaced. The 10GB card carries ten 1GB GDDR6X chips and the 12GB card carries twelve, all arranged around the GPU on the front of the board. Each chip connects to the GPU through its own 32-bit slice of the memory bus, so testing that reports which part of the bus is producing errors can point to the chip that has failed.</p>
+                <p><strong>Failed GDDR6X memory on an RTX 3080 can be replaced, one chip at a time, from $530.</strong> The memory layout makes the failed chip traceable:</p>
+
+                <ul>
+                <li>The 10GB card carries ten 1GB GDDR6X chips; the 12GB card carries twelve.</li>
+                <li>All of them sit around the GPU on the front of the board.</li>
+                <li>Each chip connects to the GPU through its own 32-bit slice of the memory bus, so testing that reports which part of the bus is producing errors points to the chip that has failed.</li>
+                </ul>
 
                 <p>GDDR6X, made by Micron, signals using four voltage levels per pin (PAM4) rather than the two used by older memory. That is how it reaches its speed, and it also leaves less margin for error. A chip with a weakening internal fault, or a cracked joint underneath it, can pass at idle and start producing errors once data rates and temperatures climb under load.</p>
 
-                <p>Replacing a chip means removing it with controlled hot air, preparing the pads on the board, fitting a new chip of the correct type and retesting the whole memory array. The thermal pads are renewed at the correct thickness, because a pad that does not touch the chip properly puts the new one under the same heat stress that may have killed the old one. Memory chip replacement starts from $530. A second failed chip, or a memory fault combined with a power fault, adds to the cost, and the quote covers it before any work starts.</p>
+                <p>The replacement itself:</p>
 
-                <h2>RTX 3080 Power Stage and MOSFET Repair</h2>
+                <ol>
+                <li>The failed chip is removed with controlled hot air.</li>
+                <li>The pads on the board are cleaned and prepared.</li>
+                <li>A new chip of the correct type is fitted.</li>
+                <li>The whole memory array is retested, not just the new chip.</li>
+                <li>The thermal pads are renewed at the correct thickness, so the new chip is not put under the same heat stress that may have killed the old one.</li>
+                </ol>
 
-                <p>Power-stage failures are among the most repairable RTX 3080 faults. The card converts the 12V from your power supply into the much lower voltages the GPU core and memory run on, using a bank of power stages: integrated packages containing MOSFETs, the electronic switches that do the conversion, often called DrMOS. A controller chip switches them in sequence. When a power stage fails, it often fails short, either pulling its rail down or tripping your power supply's protection.</p>
+                <p>A second failed chip, or a memory fault combined with a power fault, adds to the cost, and the quote covers it before any work starts.</p>
+
+                <h2 id="power-stage">RTX 3080 Power Stage and MOSFET Repair</h2>
+
+                <p><strong>Power-stage failures are among the most repairable RTX 3080 faults, with repairs from $430.</strong> The card converts the 12V from your power supply into the much lower voltages the GPU core and memory run on, using a bank of power stages: integrated packages containing MOSFETs, the electronic switches that do the conversion, often called DrMOS. A controller chip switches them in sequence. When a power stage fails, it often fails short, either pulling its rail down or tripping your power supply's protection.</p>
 
                 <p>An RTX 3080 is rated at 320W for the 10GB card and 350W for the 12GB card, and almost all of that current passes through the core and memory power stages. Heat, sustained high load and voltage spikes are what usually finish them. The core rail is often labelled NVVDD on NVIDIA boards and the memory rail FBVDD, which is useful to know if you are reading a repair forum.</p>
 
-                <p>Replacing the failed stage is only half the job. The question is why it failed, so the neighbouring stages, the controller and the capacitors on the same rail are checked, and each rail is brought up on a current-limited supply before the GPU itself is given full power. Power-stage repair starts from $430.</p>
+                <p>Replacing the failed stage is only half the job. The other half is finding out why it failed:</p>
 
-                <h2>RTX 3080 Short Circuit Diagnosis</h2>
+                <ul>
+                <li>The neighbouring stages, the controller and the capacitors on the same rail are checked.</li>
+                <li>Each rail is brought up on a current-limited supply before the GPU is given full power.</li>
+                <li>The card is then run under sustained load to confirm the rail holds at full current.</li>
+                </ul>
 
-                <p>A shorted RTX 3080 is diagnosed with the power off first. Resistance from each rail to ground is measured to find which rail is shorted, and then the faulty part on that rail is located. On these cards it is commonly a failed power stage or one of the small ceramic capacitors around and behind the GPU.</p>
+                <h2 id="short-circuit">RTX 3080 Short Circuit Diagnosis</h2>
 
-                <p>Finding which of dozens of parts on a rail is the short is done by feeding a small, current-limited supply into the shorted rail at low voltage and watching the board with a thermal camera. The failed part is where the current goes, so it is the part that warms. Powering a shorted card in a normal computer, or repeatedly trying it in different slots, risks turning one failed part into several.</p>
+                <p><strong>A shorted RTX 3080 is diagnosed with the power off first, by measuring each rail's resistance to ground to find which rail is shorted.</strong> The faulty part on that rail is then located. On these cards it is commonly a failed power stage or one of the small ceramic capacitors around and behind the GPU.</p>
 
-                <p>Where the short is tells you a lot. A short on the 12V input usually trips the power supply the moment the computer turns on. A short on the core rail often lets the fans spin while the card stays dark.</p>
+                <p>Finding which of dozens of parts on a rail is the short is done by feeding a small, current-limited supply into the shorted rail at low voltage and watching the board with a thermal camera. The failed part is where the current goes, so it is the part that warms.</p>
 
-                <h2>RTX 3080 Crashing Under Load</h2>
+                <p>Where the short is tells you a lot:</p>
 
-                <p>An RTX 3080 that runs normally on the desktop but crashes, black-screens or restarts the computer in games has a fault that only appears under load. The usual causes are memory that errors once it is hot, power delivery that cannot hold its voltage at full current, or a cooler that is no longer removing heat properly.</p>
+                <ul>
+                <li><strong>Short on the 12V input:</strong> usually trips the power supply the moment the computer turns on.</li>
+                <li><strong>Short on the core rail:</strong> often lets the fans spin while the card stays dark.</li>
+                </ul>
+
+                <div class="note"><p><strong>Stop powering a card you suspect is shorted.</strong> Running it in a normal computer, or repeatedly trying it in different slots, risks turning one failed part into several.</p></div>
+
+                <h2 id="crashing">RTX 3080 Crashing Under Load</h2>
+
+                <p><strong>An RTX 3080 that runs normally on the desktop but crashes, black-screens or restarts the computer in games has a fault that only appears under load.</strong> The usual causes are memory that errors once it is hot, power delivery that cannot hold its voltage at full current, or a cooler that is no longer removing heat properly.</p>
+
+                <p>Check these before sending the card:</p>
+
+                <ul>
+                <li><strong>Power cables:</strong> run each 8-pin power input from its own cable, not one cable with two plugs.</li>
+                <li><strong>Temperatures:</strong> watch them with a monitoring tool such as HWiNFO, which shows a separate memory junction temperature on GDDR6X cards.</li>
+                <li><strong>History:</strong> many second-hand 3080s spent 2021 and 2022 mining cryptocurrency around the clock, a memory-heavy load, until Ethereum mining ended in September 2022. Dried thermal pads and tired fans are common on those cards, and a thermal service from $330 is often the first step.</li>
+                </ul>
 
                 <p>In late 2020, newly released RTX 3080s were widely reported to crash at high boost clocks. Discussion focused on the capacitor arrangement behind the GPU, which varies between board designs, and a driver update at the end of September 2020 largely addressed it. A card still crashing today has a different problem.</p>
 
-                <p>Before sending a card, run each 8-pin power input from its own cable rather than one cable with two plugs, and check temperatures with a monitoring tool such as HWiNFO, which shows a separate memory junction temperature for GDDR6X cards. Many second-hand 3080s spent 2021 and 2022 mining cryptocurrency around the clock, a memory-heavy load, until Ethereum mining ended in September 2022. Dried thermal pads and tired fans are common on those cards, and a thermal service from $330 is often the first step.</p>
+                <h2 id="code-43">RTX 3080 Code 43 Hardware Faults</h2>
 
-                <h2>RTX 3080 Code 43 Hardware Faults</h2>
+                <p><strong>Code 43 means Windows has stopped the card because it reported a problem; if it survives a clean driver reinstall and appears in a second computer, it is usually hardware.</strong> On an RTX 3080 that most often means memory, firmware or power. Rule out software first:</p>
 
-                <p>Code 43 means Windows has stopped the card because it reported a problem. On an RTX 3080 it can be a driver or system fault, but if it survives a clean driver reinstall and also appears in a second computer, it usually points to hardware, most often memory, firmware or power.</p>
+                <ol>
+                <li>Remove the driver completely with a tool such as Display Driver Uninstaller.</li>
+                <li>Install the current driver.</li>
+                <li>If possible, try the card in another computer.</li>
+                <li>If Code 43 follows the card, send it for diagnosis. If it stays with the computer, the card is probably fine.</li>
+                </ol>
 
-                <p>Separate the two before paying for anything. Remove the driver completely with a tool such as Display Driver Uninstaller, install the current driver, and if possible try the card in another computer. On the bench, a hardware Code 43 is narrowed down by testing the memory, reading the firmware chip and checking it against the correct version for that exact card, and checking that every rail comes up at the right voltage.</p>
+                <p>On the bench, a hardware Code 43 is narrowed down by testing the memory, reading the firmware chip and checking it against the correct version for that exact card, and checking that every rail comes up at the right voltage.</p>
 
-                <h2>RTX 3080 10GB vs RTX 3080 12GB Repairs</h2>
+                <h2 id="10gb-vs-12gb">RTX 3080 10GB vs RTX 3080 12GB Repairs</h2>
 
-                <p>The RTX 3080 10GB and 12GB are related cards, not identical ones. Both use NVIDIA's GA102 GPU and GDDR6X memory, but the 12GB version, released in January 2022, has a wider memory bus, two more memory chips, more CUDA cores and a higher power rating.</p>
+                <p><strong>The RTX 3080 10GB and 12GB are related cards, not identical ones.</strong> Both use NVIDIA's GA102 GPU and GDDR6X memory, but the 12GB version, released in January 2022, has a wider memory bus, two more memory chips, more CUDA cores and a higher power rating.</p>
 
                 <div class="table-wrap"><table class="spec-table stack"><thead><tr><th></th><th>RTX 3080 10GB</th><th>RTX 3080 12GB</th></tr></thead><tbody>
                 <tr><td>Released</td><td data-label="RTX 3080 10GB">September 2020</td><td data-label="RTX 3080 12GB">January 2022</td></tr>
@@ -246,19 +338,31 @@
                 <tr><td>Founders Edition</td><td data-label="RTX 3080 10GB">Yes</td><td data-label="RTX 3080 12GB">No, partner cards only</td></tr>
                 </tbody></table></div>
 
-                <p>For a repair, the differences go further than the table. Partner boards differ in their power-stage count and layout, the parts they use and where test points sit. From mid-2021, new 3080s were also built as Lite Hash Rate (LHR) versions, which identify themselves differently to the computer. Firmware has to match the exact card: the board design, the memory configuration and whether it is an original or LHR revision. A firmware file from a similar-looking card can leave a working board dead.</p>
+                <p>For a repair, the differences go further than the table:</p>
+
+                <ul>
+                <li>Partner boards differ in their power-stage count and layout, the parts they use and where test points sit.</li>
+                <li>From mid-2021, new 3080s were built as Lite Hash Rate (LHR) versions, which identify themselves differently to the computer.</li>
+                <li>Firmware has to match the exact card: the board design, the memory configuration and whether it is an original or LHR revision. A firmware file from a similar-looking card can leave a working board dead.</li>
+                </ul>
 
                 <p>That is why we ask for the exact model name from the box or the sticker on the card, and sometimes a photo, before quoting.</p>
 
-                <h2>Founders Edition and Partner RTX 3080 Cards</h2>
+                <h2 id="founders-edition">Founders Edition and Partner RTX 3080 Cards</h2>
 
-                <p>NVIDIA's own Founders Edition RTX 3080 uses a short, V-shaped circuit board so the cooler can blow air straight through the end of the card, and it takes power through a single 12-pin connector. Partner cards from ASUS, Gigabyte, MSI, EVGA, Zotac, PNY, Galax, Palit, Inno3D and others mostly use full-length boards fed by two or three 8-pin connectors, each with its own power-stage layout and component choices.</p>
+                <p><strong>We repair NVIDIA's Founders Edition RTX 3080 and partner cards from ASUS, Gigabyte, MSI, EVGA, Zotac, PNY, Galax, Palit, Inno3D and others, and the board design changes the job.</strong></p>
 
-                <p>Those differences change the job. The Founders Edition takes longer to strip and rebuild than most partner cards, and its compact board packs the power section tightly. Several higher-end partner models, such as the ASUS ROG Strix, MSI Suprim X and EVGA FTW3, have a dual BIOS switch, so a card that died during a firmware update can sometimes be recovered by switching to the second BIOS before it needs to come to us. We work on Founders Edition and partner RTX 3080s from all of these makers, and parts are matched to the specific board rather than to "an RTX 3080".</p>
+                <div class="table-wrap"><table class="spec-table stack"><thead><tr><th></th><th>Founders Edition</th><th>Partner cards</th></tr></thead><tbody>
+                <tr><td>Circuit board</td><td data-label="Founders Edition">Short, V-shaped, so the cooler can blow air straight through the end of the card</td><td data-label="Partner cards">Mostly full-length, each maker with its own power-stage layout and component choices</td></tr>
+                <tr><td>Power input</td><td data-label="Founders Edition">One 12-pin connector</td><td data-label="Partner cards">Two or three 8-pin connectors</td></tr>
+                <tr><td>On the bench</td><td data-label="Founders Edition">Takes longer to strip and rebuild; the power section is tightly packed</td><td data-label="Partner cards">Parts and firmware matched to the specific board</td></tr>
+                </tbody></table></div>
 
-                <h2>How We Diagnose an RTX 3080</h2>
+                <p>Several higher-end partner models, such as the ASUS ROG Strix, MSI Suprim X and EVGA FTW3, have a dual BIOS switch. A card that died during a firmware update can sometimes be recovered by switching to the second BIOS before it needs to come to us.</p>
 
-                <p>Diagnosis moves from the safest checks to the most invasive, so the fault is never made worse by testing it. Where a step does not apply to your card's symptom, it is skipped.</p>
+                <h2 id="diagnosis">How We Diagnose an RTX 3080</h2>
+
+                <p><strong>Diagnosis moves from the safest checks to the most invasive, so the fault is never made worse by testing it.</strong> Where a step does not apply to your card's symptom, it is skipped.</p>
 
                 <ol>
                 <li><strong>Visual inspection under magnification.</strong> Burnt or cracked components, liquid residue, damaged connectors, torn thermal pads and signs of previous repair work.</li>
@@ -272,21 +376,38 @@
                 <li><strong>Testing before return.</strong> Detection, output on every display port, sustained load, and temperature monitoring including memory junction temperature.</li>
                 </ol>
 
-                <h2>Can an RTX 3080 Be Repaired?</h2>
+                <h2 id="repairable">Can an RTX 3080 Be Repaired?</h2>
 
-                <p>Many RTX 3080 faults can be repaired at board level. Repairable problems include failed GDDR6X memory, damaged power stages, MOSFET faults, shorted components, damaged connectors and ports, and some BIOS-related failures. Severe circuit board damage or a failed GPU core may make repair impractical.</p>
+                <p><strong>Many RTX 3080 faults can be repaired at board level, because the expensive part rarely fails first.</strong> The GA102 GPU in the middle of the board is surrounded by memory chips, power stages and hundreds of small components that work harder and fail more readily. Faults that are usually repairable:</p>
 
-                <p>The reason most faults are fixable is that the expensive part rarely fails first. The GA102 GPU in the middle of the board is surrounded by memory chips, power stages and hundreds of small components that work harder and fail more readily. Replace the part that has failed, find out why it failed, and the card usually returns to normal. The diagnostic is what tells you which case you are in.</p>
+                <ul class="service-list">
+                <li>Failed GDDR6X memory chips</li>
+                <li>Damaged power stages and MOSFETs</li>
+                <li>Shorted capacitors and other small components</li>
+                <li>Damaged power connectors and display ports</li>
+                <li>Corrupted or mismatched BIOS firmware</li>
+                <li>Dried thermal pads and paste causing overheating and crashes</li>
+                </ul>
 
-                <h2>What RTX 3080 Faults May Not Be Economical to Repair?</h2>
+                <p>Replace the part that has failed, find out why it failed, and the card usually returns to normal. The diagnostic is what tells you which case you are in.</p>
 
-                <p>Some RTX 3080 faults cost more to repair than the card is worth, and a few cannot be repaired reliably at all. The main ones are a degraded or physically damaged GPU core, severe burning that has gone through the layers of the circuit board, heavy corrosion, a cracked board, several major faults at once, and damage left by a poor previous repair, such as torn pads under a chip.</p>
+                <h2 id="not-economical">What RTX 3080 Faults May Not Be Economical to Repair?</h2>
 
-                <p>A GPU core cannot be fixed, only replaced, and replacement GA102 cores generally come from salvaged cards, which makes that repair expensive and uncertain. Multilayer board damage can sometimes be bridged, but that kind of repair is rarely reliable on a card drawing over 300W. When a card falls into one of these categories we tell you after the diagnostic, you pay the $150 and the return postage if it was posted, and you get an explanation of what failed.</p>
+                <p><strong>Some RTX 3080 faults cost more to repair than the card is worth, and a few cannot be repaired reliably at all.</strong> The main ones:</p>
 
-                <h2>RTX 3080 Repair Cost</h2>
+                <ul>
+                <li><strong>A degraded or physically damaged GPU core.</strong> A core cannot be fixed, only replaced, and replacement GA102 cores generally come from salvaged cards, which makes that repair expensive and uncertain.</li>
+                <li><strong>Severe burning through the layers of the circuit board.</strong> Multilayer damage can sometimes be bridged, but that kind of repair is rarely reliable on a card drawing over 300W.</li>
+                <li><strong>Heavy corrosion or a cracked board.</strong></li>
+                <li><strong>Several major faults at once.</strong></li>
+                <li><strong>Damage left by a poor previous repair,</strong> such as torn pads under a chip.</li>
+                </ul>
 
-                <p>RTX 3080 repairs start from $330. The final price depends on the fault found, the condition of the board and the component-level work required, and it is fixed in the quote before work starts.</p>
+                <p>When a card falls into one of these categories we tell you after the diagnostic. You pay the $150 and the return postage if it was posted, and you get an explanation of what failed.</p>
+
+                <h2 id="cost">RTX 3080 Repair Cost</h2>
+
+                <p><strong>RTX 3080 repairs start from $330, and the final price is fixed in the quote before any work starts.</strong> It depends on the fault found, the condition of the board and the component-level work required.</p>
 
                 <div class="table-wrap"><table class="spec-table"><thead><tr><th>Work</th><th>Price</th></tr></thead><tbody>
                 <tr><td>Bench diagnostic</td><td>$150, waived if you go ahead with the repair</td></tr>
@@ -300,68 +421,123 @@
 
                 <p>A single failed power stage and a combined memory and power fault are not the same amount of work, which is why there is no single RTX 3080 repair price. Interstate customers also pay postage both ways and choose their own service and insurance.</p>
 
-                <h2>Is an RTX 3080 Still Worth Repairing?</h2>
+                <h2 id="worth-repairing">Is an RTX 3080 Still Worth Repairing?</h2>
 
-                <p>Often, yes, but it depends on the fault and on what a working RTX 3080 sells for when you ask. A repair makes sense when the quote is comfortably below the price of a working second-hand card, allowing for the fact that a used card comes with an unknown history and our repair comes with 12 months of warranty.</p>
+                <p><strong>Often, yes: a repair makes sense when the quote is comfortably below what a working second-hand RTX 3080 sells for.</strong> Check recently sold listings rather than asking prices, because asking prices run higher.</p>
 
-                <p>Check recently sold listings rather than asking prices, because asking prices run higher. As an illustration: if working 3080s are selling for around $600 near you, a power-stage repair from $430 is easy to justify; a memory and power repair that approaches the card's value is not, and we will say so after the diagnostic. A thermal service from $330 on a card that is otherwise healthy is almost always worth doing.</p>
+                <p><strong>Repair usually makes sense when:</strong></p>
+                <ul>
+                <li>The fault is a thermal service, firmware or a single power stage on an otherwise healthy card.</li>
+                <li>The quote is well under the price of a working used card. A used card comes with an unknown history; the parts we replace carry 12 months of warranty for the same fault.</li>
+                <li>The card is out of warranty, bought second hand, already opened, or refused under warranty.</li>
+                </ul>
 
-                <p>If the card is still under the manufacturer's warranty or was bought new recently, go to the retailer first; your consumer guarantee rights sit with them. Repair is for cards out of warranty, bought second hand, already opened, or refused under warranty.</p>
+                <p><strong>Repair may not make sense when:</strong></p>
+                <ul>
+                <li>The repair cost approaches the card's value, for example a combined memory and power fault. We will say so after the diagnostic.</li>
+                <li>The GPU core has failed or the board is badly burnt (see <a href="#not-economical">above</a>).</li>
+                <li>The card is still under the manufacturer's warranty or was bought new recently. Go to the retailer first; your consumer guarantee rights sit with them.</li>
+                </ul>
 
-                <h2>RTX 3080 Repair Turnaround</h2>
+                <p>As an illustration: if working 3080s are selling for around $600 near you, a power-stage repair from $430 is easy to justify, and a thermal service from $330 on an otherwise healthy card is almost always worth doing.</p>
 
-                <p>Bench time for an RTX 3080 depends on the fault. Thermal and firmware work usually takes one to two business days after the card arrives, power-stage and memory repairs three to seven, and reball or physical damage repairs five to ten.</p>
+                <h2 id="turnaround">RTX 3080 Repair Turnaround</h2>
 
-                <p>Intermittent faults take longer, because they have to be reproduced before they can be traced. Any job waiting on a part depends on supply, and you will be told if that applies before you approve the quote. Interstate customers should add the postage time each way; the <a href="/services/graphics-card-repair-australia">Australia-wide graphics card repair</a> page has Australia Post's estimates by state.</p>
+                <p><strong>Bench time for an RTX 3080 depends on the fault, from one business day for firmware work to ten for physical damage.</strong></p>
 
-                <h2>What Happens After the Repair?</h2>
+                <div class="table-wrap"><table class="spec-table"><thead><tr><th>Repair type</th><th>Usual bench time</th></tr></thead><tbody>
+                <tr><td>Thermal service, firmware recovery</td><td>1–2 business days</td></tr>
+                <tr><td>Power-stage and memory repairs</td><td>3–7 business days</td></tr>
+                <tr><td>Reball and physical damage</td><td>5–10 business days</td></tr>
+                <tr><td>Intermittent faults</td><td>Longer: the fault has to be reproduced before it can be traced</td></tr>
+                </tbody></table></div>
 
-                <p>A repaired RTX 3080 is tested before it goes back. That means checking that the computer detects it, that every display output works, and that it holds stable under sustained load while its core and memory temperatures are monitored. You are told what was replaced and why.</p>
+                <p>Any job waiting on a part depends on supply, and you will be told if that applies before you approve the quote. Interstate customers should add the postage time each way; the <a href="/services/graphics-card-repair-australia">Australia-wide graphics card repair</a> page has Australia Post's estimates by state.</p>
 
-                <p>The card is returned once the invoice is paid: collected from the workshop by arrangement, or posted back using your prepaid label or with return postage added to the invoice at cost. The repair carries 12 months of warranty on parts and labour. To help it last, run each power input from its own cable and make sure the case has a clear path for the heat the card produces.</p>
+                <h2 id="after-repair">What Happens After the Repair?</h2>
 
-                <h2>Typical RTX 3080 Repair Scenarios</h2>
+                <p><strong>A repaired RTX 3080 is tested before it goes back, and you are told what was replaced and why.</strong> Testing covers:</p>
 
-                <p>The scenarios below show how RTX 3080 faults commonly present, what diagnosis usually finds and what the repair involves. They are fault patterns, not a promise about your card: every card is diagnosed on its own and quoted on what is found.</p>
+                <ul>
+                <li>The computer detects the card normally.</li>
+                <li>Every display output works.</li>
+                <li>The card holds stable under sustained load while core and memory temperatures are monitored.</li>
+                </ul>
 
+                <p>The card is returned once the invoice is paid: collected from the workshop by arrangement, or posted back using your prepaid label or with return postage added to the invoice at cost.</p>
+
+                <p><strong>Warranty:</strong> the parts we replace carry a 12-month warranty for the same fault. If that fault returns within the year because a replaced part has failed, bring or send the card back and the part is covered. To help the repair last, run each power input from its own cable and make sure the case has a clear path for the heat the card produces.</p>
+
+                <h2 id="scenarios">Typical RTX 3080 Repair Scenarios</h2>
+
+                <p><strong>These are the ways RTX 3080 faults most often present, what diagnosis usually finds and what the repair involves.</strong> They are fault patterns, not a promise about your card: every card is diagnosed on its own and quoted on what is found.</p>
+
+                <div class="imac-card case-card">
                 <h3>Artefacts in games that get worse as the card warms up</h3>
-                <p><strong>What you see:</strong> The desktop looks normal, but after ten or twenty minutes in a game, coloured blocks and flickering textures appear, followed by a crash.</p>
-                <p><strong>What diagnosis usually finds:</strong> Memory testing at temperature shows errors concentrated in one part of the memory bus, pointing to a single GDDR6X chip. The power supply to the memory checks out, which rules out the other common cause.</p>
-                <p><strong>The repair:</strong> The failed chip is replaced, the whole memory array is retested, and the memory thermal pads are renewed at the correct thickness. From $530, usually three to seven business days on the bench.</p>
-                <p><strong>Before it goes back:</strong> Extended load testing with memory junction temperature logged, so the fault cannot be hiding behind a cool card.</p>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>The desktop looks normal, but after ten or twenty minutes in a game, coloured blocks and flickering textures appear, followed by a crash.</dd>
+                <dt>What diagnosis usually finds</dt><dd>Memory testing at temperature shows errors in one part of the memory bus, pointing to a single GDDR6X chip. The memory's power supply checks out, which rules out the other common cause.</dd>
+                <dt>The repair</dt><dd>The failed chip is replaced, the whole memory array is retested and the memory thermal pads are renewed at the correct thickness.</dd>
+                <dt>Price and bench time</dt><dd>From $530, usually three to seven business days</dd>
+                <dt>Before it goes back</dt><dd>Extended load testing with memory junction temperature logged, so the fault cannot hide behind a cool card.</dd>
+                </dl>
+                </div>
 
+                <div class="imac-card case-card">
                 <h3>The computer switches off the moment it starts</h3>
-                <p><strong>What you see:</strong> With the card fitted, the computer powers on for a fraction of a second and shuts off. Without the card, the computer runs.</p>
-                <p><strong>What diagnosis usually finds:</strong> A dead short on the core rail, traced with a thermal camera to one failed power stage.</p>
-                <p><strong>The repair:</strong> The failed stage is replaced, its neighbours and the controller are checked, and the rail is brought up on a current-limited supply before the card is run normally. From $430, usually three to seven business days.</p>
-                <p><strong>Before it goes back:</strong> Rail voltages checked, then sustained load to confirm the replaced stage holds under full current.</p>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>With the card fitted, the computer powers on for a fraction of a second and shuts off. Without the card, the computer runs.</dd>
+                <dt>What diagnosis usually finds</dt><dd>A dead short on the core rail, traced with a thermal camera to one failed power stage.</dd>
+                <dt>The repair</dt><dd>The failed stage is replaced, its neighbours and the controller are checked, and the rail is brought up on a current-limited supply before the card is run normally.</dd>
+                <dt>Price and bench time</dt><dd>From $430, usually three to seven business days</dd>
+                <dt>Before it goes back</dt><dd>Rail voltages checked, then sustained load to confirm the replaced stage holds under full current.</dd>
+                </dl>
+                </div>
 
+                <div class="imac-card case-card">
                 <h3>Fans spin and nothing appears after a BIOS update</h3>
-                <p><strong>What you see:</strong> A firmware update was interrupted, or the wrong file was used. The card now powers its fans but shows nothing, and the computer may not detect it.</p>
-                <p><strong>What diagnosis usually finds:</strong> The hardware is healthy and the BIOS chip holds corrupted or mismatched firmware. Flashing firmware meant for an original 3080 onto an LHR card, or the reverse, is one way this happens.</p>
-                <p><strong>The repair:</strong> The BIOS chip is reprogrammed directly on the board with the correct firmware for that exact model and revision. From $330, usually one to two business days.</p>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>A firmware update was interrupted, or the wrong file was used. The card now powers its fans but shows nothing, and the computer may not detect it.</dd>
+                <dt>What diagnosis usually finds</dt><dd>The hardware is healthy and the BIOS chip holds corrupted or mismatched firmware. Flashing firmware meant for an original 3080 onto an LHR card, or the reverse, is one way this happens.</dd>
+                <dt>The repair</dt><dd>The BIOS chip is reprogrammed directly on the board with the correct firmware for that exact model and revision.</dd>
+                <dt>Price and bench time</dt><dd>From $330, usually one to two business days</dd>
+                </dl>
+                </div>
 
+                <div class="imac-card case-card">
                 <h3>A second-hand card that crashes after twenty minutes</h3>
-                <p><strong>What you see:</strong> A used 3080, often an ex-mining card, that runs loud and hot and crashes in longer gaming sessions.</p>
-                <p><strong>What diagnosis usually finds:</strong> Thermal pads that have hardened and lost contact with the memory, dried paste on the GPU, and memory junction temperatures far above where they should be. Memory testing after cooling is restored decides whether any chip has been damaged.</p>
-                <p><strong>The repair:</strong> A full strip, clean, repaste and correctly measured pads. From $330, usually one to two business days. If a chip is still producing errors once it runs cool, it is quoted separately before anything more is done.</p>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>A used 3080, often an ex-mining card, that runs loud and hot and crashes in longer gaming sessions.</dd>
+                <dt>What diagnosis usually finds</dt><dd>Thermal pads that have hardened and lost contact with the memory, dried paste on the GPU, and memory junction temperatures far above where they should be.</dd>
+                <dt>The repair</dt><dd>A full strip, clean, repaste and correctly measured pads. If a chip still produces errors once it runs cool, it is quoted separately before anything more is done.</dd>
+                <dt>Price and bench time</dt><dd>From $330, usually one to two business days</dd>
+                </dl>
+                </div>
 
+                <div class="imac-card case-card">
                 <h3>Code 43 that turns out not to be the card</h3>
-                <p><strong>What you see:</strong> Windows reports Code 43 and the card will not run games.</p>
-                <p><strong>What diagnosis usually finds:</strong> On the bench the card is detected normally, passes memory testing, holds every rail and runs a sustained load without fault, so the problem is in the original computer: a driver installation, a motherboard setting or the power supply.</p>
-                <p><strong>The outcome:</strong> No repair is carried out. You pay the $150 diagnostic and any return postage, and you get the test results and the next things to check in your own system.</p>
+                <dl class="imac-facts">
+                <dt>What you see</dt><dd>Windows reports Code 43 and the card will not run games.</dd>
+                <dt>What diagnosis usually finds</dt><dd>On the bench the card is detected normally, passes memory testing, holds every rail and runs a sustained load without fault. The problem is in the original computer: a driver installation, a motherboard setting or the power supply.</dd>
+                <dt>The outcome</dt><dd>No repair is carried out. You pay the $150 diagnostic and any return postage, and you get the test results and the next things to check in your own system.</dd>
+                </dl>
+                </div>
 
-                <p><a class="btn" href="#gpu-enquiry">Send your RTX 3080 fault details</a></p>
+                <h2 id="sydney">RTX 3080 Repair in Sydney</h2>
 
-                <h2>RTX 3080 Repair in Sydney</h2>
+                <p><strong>Sydney customers can drop an RTX 3080 at our workshop near Castle Hill in the Hills District, by arrangement.</strong></p>
 
-                <p>For Sydney customers, an RTX 3080 can be dropped off at our workshop near Castle Hill in the Hills District, Monday to Saturday between 8am and 6pm, by arrangement. Fill in the form below or ring first, and we reply with what is likely wrong, where the price starts, and the workshop address with your job number.</p>
+                <ul>
+                <li><strong>Hours:</strong> Monday to Saturday, 8am to 6pm.</li>
+                <li><strong>Before you come:</strong> fill in the form below or ring first. We reply with what is likely wrong, where the price starts, and the workshop address with your job number.</li>
+                <li><strong>Can't get to us?</strong> Post the card from anywhere in the metro area and it comes back the same way, at the same price.</li>
+                </ul>
 
-                <p>If driving across Sydney is impractical, the card can be posted from anywhere in the metro area and returned the same way, at the same price. Our main <a href="/services/graphics-card-repair-sydney">GPU board-level repair</a> page covers every other card model and the faults common to all of them.</p>
+                <p>Our main <a href="/services/graphics-card-repair-sydney">GPU board-level repair</a> page covers every other card model and the faults common to all of them.</p>
 
-                <h2>Interstate RTX 3080 Mail-In Repair</h2>
+                <h2 id="interstate">Interstate RTX 3080 Mail-In Repair</h2>
 
-                <p>An RTX 3080 can be posted to our Sydney repair bench from anywhere in Australia. We do not have workshops in other cities; the card travels to the Sydney bench and comes back once it has been repaired and tested.</p>
+                <p><strong>An RTX 3080 can be posted to our Sydney repair bench from anywhere in Australia.</strong> We do not have workshops in other cities; the card travels to the Sydney bench and comes back once it has been repaired and tested.</p>
 
                 <ol>
                 <li>Fill in the form below or ring 0400 454 859. We reply with the likely cause, a starting price, the workshop address and a job number.</li>
@@ -372,7 +548,7 @@
 
                 <p>You pay postage both ways and choose the service and insurance. The <a href="/services/graphics-card-repair-australia">mail-in graphics card repair</a> page has the full packing and insurance guide, and there are pages with postage estimates for <a href="/services/graphics-card-repair-melbourne">Melbourne</a>, <a href="/services/graphics-card-repair-brisbane">Brisbane</a>, <a href="/services/graphics-card-repair-perth">Perth</a>, <a href="/services/graphics-card-repair-adelaide">Adelaide</a>, <a href="/services/graphics-card-repair-canberra">Canberra</a>, <a href="/services/graphics-card-repair-hobart">Hobart</a> and <a href="/services/graphics-card-repair-darwin">Darwin</a>, as well as for regional NSW towns such as <a href="/services/graphics-card-repair-newcastle">Newcastle</a> and <a href="/services/graphics-card-repair-wollongong">Wollongong</a>.</p>
 
-                <h2>Frequently Asked Questions</h2>
+                <h2 id="faq">Frequently Asked Questions</h2>
                 <h3>Can an RTX 3080 be repaired?</h3>
                 <p>Yes, in most cases. Failed GDDR6X memory, power stages, connectors, ports and firmware can all be repaired at component level, and shorted parts can be traced and replaced. A failed GPU core, severe multilayer board damage, heavy corrosion or a cracked board may make repair impractical. The $150 diagnostic, waived if you go ahead, tells you which case applies.</p>
                 <h3>Can RTX 3080 VRAM be replaced?</h3>
@@ -385,8 +561,10 @@
                 <p>A computer that switches off as soon as it starts with the card fitted usually has a short on the card, on the 12V input or a power rail, tripping the power supply's protection. A failed power stage or capacitor is the usual cause. Stop retrying it, as each attempt can damage more parts. Power-stage repairs start from $430.</p>
                 <h3>How much does an RTX 3080 repair cost?</h3>
                 <p>From $330 for a thermal service or firmware recovery, $370 for connector and port work, $430 for a power stage and $530 for a GDDR6X memory chip, with reflow or reball from $630. The $150 diagnostic is waived if you go ahead, and your final price is fixed in the quote before work starts.</p>
+                <h3>What warranty comes with an RTX 3080 repair?</h3>
+                <p>Twelve months on the parts we replace, for the same fault. If the fault we repaired comes back within that year because a replaced part has failed, bring or send the card back and the part is covered. A different fault is a new job, diagnosed and quoted separately before any work is done.</p>
                 <h3>Is an RTX 3080 still worth repairing?</h3>
-                <p>Often. Compare the quote with recently sold prices for a working RTX 3080, remembering a used card has an unknown history while the repair carries 12 months of warranty. A thermal service or single power-stage repair is usually worth it; a memory and power repair approaching the card's value may not be, and we will tell you so.</p>
+                <p>Often. Compare the quote with recently sold prices for a working RTX 3080, remembering a used card has an unknown history while the parts we replace carry 12 months of warranty for the same fault. A thermal service or single power-stage repair is usually worth it; a memory and power repair approaching the card's value may not be, and we will tell you so.</p>
                 <h3>Can an RTX 3080 with Code 43 be repaired?</h3>
                 <p>If the cause is hardware, usually yes. Remove the driver completely, reinstall it and, if possible, try the card in another computer. If the error follows the card, it is often memory, firmware or power, all repairable. If the card passes every bench test, you pay only the $150 diagnostic and receive the results.</p>
                 <h3>How long does RTX 3080 repair take?</h3>
@@ -471,7 +649,7 @@
         </div>
     </section>
 
-    <section class="cta-banner"><div class="container"><h2>RTX 3080 Board-Level Repair, Sydney and Australia-Wide</h2><p>Bench diagnosis near Castle Hill, repairs from $330, the $150 diagnostic waived if you go ahead, and 12 months of warranty on the work.</p><a href="tel:0400454859" class="cta-phone">0400 454 859</a></div></section>
+    <section class="cta-banner"><div class="container"><h2>RTX 3080 Board-Level Repair, Sydney and Australia-Wide</h2><p>Bench diagnosis near Castle Hill, repairs from $330, the $150 diagnostic waived if you go ahead, and 12 months of warranty on the parts replaced, for the same fault.</p><a href="tel:0400454859" class="cta-phone">0400 454 859</a></div></section>
 
     <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-info"><a href="../" class="logo"><img src="../assets/images/prontositelogo.png" alt="Computer Repairs Pronto" class="logo-img"></a><p>Workshop near Castle Hill, servicing the Hills District and Sydney.</p><div class="footer-contact"><a href="tel:0400454859" style="color: #f97316; font-weight: 600;">0400 454 859</a></div></div><div class="footer-nav"><h4>Services</h4><ul><li><a href="laptop-repairs.html">Laptop Repairs</a></li><li><a href="mac-repairs.html">Mac Repairs</a></li><li><a href="pc-repairs.html">PC Repairs</a></li><li><a href="data-recovery.html">Data Recovery</a></li><li><a href="virus-removal.html">Virus Removal</a></li>
 <li><a href="electronics-repair.html">Electronics Repair</a></li>
@@ -504,6 +682,8 @@
   }
 })();
 </script>
+<script>(function(){var h=document.querySelector('.header');if(!h)return;function s(){document.documentElement.style.setProperty('--hdr',h.offsetHeight+'px');}s();addEventListener('resize',s);})();</script>
+
 
 <script type="application/ld+json">
 {
@@ -677,10 +857,18 @@
     },
     {
      "@type": "Question",
+     "name": "What warranty comes with an RTX 3080 repair?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Twelve months on the parts we replace, for the same fault. If the fault we repaired comes back within that year because a replaced part has failed, bring or send the card back and the part is covered. A different fault is a new job, diagnosed and quoted separately before any work is done."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Is an RTX 3080 still worth repairing?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Often. Compare the quote with recently sold prices for a working RTX 3080, remembering a used card has an unknown history while the repair carries 12 months of warranty. A thermal service or single power-stage repair is usually worth it; a memory and power repair approaching the card's value may not be, and we will tell you so."
+      "text": "Often. Compare the quote with recently sold prices for a working RTX 3080, remembering a used card has an unknown history while the parts we replace carry 12 months of warranty for the same fault. A thermal service or single power-stage repair is usually worth it; a memory and power repair approaching the card's value may not be, and we will tell you so."
      }
     },
     {
