@@ -330,14 +330,14 @@
 
                 <p><strong>The RTX 3080 10GB and 12GB are related cards, not identical ones.</strong> Both use NVIDIA's GA102 GPU and GDDR6X memory, but the 12GB version, released in January 2022, has a wider memory bus, two more memory chips, more CUDA cores and a higher power rating.</p>
 
-                <div class="table-wrap"><table class="spec-table stack"><thead><tr><th></th><th>RTX 3080 10GB</th><th>RTX 3080 12GB</th></tr></thead><tbody>
-                <tr><td>Released</td><td data-label="RTX 3080 10GB">September 2020</td><td data-label="RTX 3080 12GB">January 2022</td></tr>
-                <tr><td>GPU</td><td data-label="RTX 3080 10GB">GA102</td><td data-label="RTX 3080 12GB">GA102</td></tr>
-                <tr><td>CUDA cores</td><td data-label="RTX 3080 10GB">8,704</td><td data-label="RTX 3080 12GB">8,960</td></tr>
-                <tr><td>Memory</td><td data-label="RTX 3080 10GB">10GB GDDR6X, ten chips</td><td data-label="RTX 3080 12GB">12GB GDDR6X, twelve chips</td></tr>
-                <tr><td>Memory bus</td><td data-label="RTX 3080 10GB">320-bit</td><td data-label="RTX 3080 12GB">384-bit</td></tr>
-                <tr><td>Rated board power</td><td data-label="RTX 3080 10GB">320W</td><td data-label="RTX 3080 12GB">350W</td></tr>
-                <tr><td>Founders Edition</td><td data-label="RTX 3080 10GB">Yes</td><td data-label="RTX 3080 12GB">No, partner cards only</td></tr>
+                <div class="table-wrap"><table class="spec-table"><thead><tr><th></th><th>RTX 3080 10GB</th><th>RTX 3080 12GB</th></tr></thead><tbody>
+                <tr><td>Released</td><td>September 2020</td><td>January 2022</td></tr>
+                <tr><td>GPU</td><td>GA102</td><td>GA102</td></tr>
+                <tr><td>CUDA cores</td><td>8,704</td><td>8,960</td></tr>
+                <tr><td>Memory</td><td>10GB GDDR6X, ten chips</td><td>12GB GDDR6X, twelve chips</td></tr>
+                <tr><td>Memory bus</td><td>320-bit</td><td>384-bit</td></tr>
+                <tr><td>Rated board power</td><td>320W</td><td>350W</td></tr>
+                <tr><td>Founders Edition</td><td>Yes</td><td>No, partner cards only</td></tr>
                 </tbody></table></div>
 
                 <p>For a repair, the differences go further than the table:</p>
@@ -354,10 +354,10 @@
 
                 <p><strong>We repair NVIDIA's Founders Edition RTX 3080 and partner cards from ASUS, Gigabyte, MSI, EVGA, Zotac, PNY, Galax, Palit, Inno3D and others, and the board design changes the job.</strong></p>
 
-                <div class="table-wrap"><table class="spec-table stack"><thead><tr><th></th><th>Founders Edition</th><th>Partner cards</th></tr></thead><tbody>
-                <tr><td>Circuit board</td><td data-label="Founders Edition">Short, V-shaped, so the cooler can blow air straight through the end of the card</td><td data-label="Partner cards">Mostly full-length, each maker with its own power-stage layout and component choices</td></tr>
-                <tr><td>Power input</td><td data-label="Founders Edition">One 12-pin connector</td><td data-label="Partner cards">Two or three 8-pin connectors</td></tr>
-                <tr><td>On the bench</td><td data-label="Founders Edition">Takes longer to strip and rebuild; the power section is tightly packed</td><td data-label="Partner cards">Parts and firmware matched to the specific board</td></tr>
+                <div class="table-wrap"><table class="spec-table"><thead><tr><th></th><th>Founders Edition</th><th>Partner cards</th></tr></thead><tbody>
+                <tr><td>Circuit board</td><td>Short, V-shaped, so the cooler can blow air straight through the end of the card</td><td>Mostly full-length, each maker with its own power-stage layout and component choices</td></tr>
+                <tr><td>Power input</td><td>One 12-pin connector</td><td>Two or three 8-pin connectors</td></tr>
+                <tr><td>On the bench</td><td>Takes longer to strip and rebuild; the power section is tightly packed</td><td>Parts and firmware matched to the specific board</td></tr>
                 </tbody></table></div>
 
                 <p>Several higher-end partner models, such as the ASUS ROG Strix, MSI Suprim X and EVGA FTW3, have a dual BIOS switch. A card that died during a firmware update can sometimes be recovered by switching to the second BIOS before it needs to come to us.</p>
@@ -535,11 +535,11 @@
                 </div>
 
                 <div class="imac-card case-card" id="s-moved">
-                <h3>Not detected after the PC was moved or the card was refitted</h3>
+                <h3>Not detected, or only sometimes, after the PC was moved or the card was refitted</h3>
                 <dl class="imac-facts">
-                <dt>What you see</dt><dd>No display, and the motherboard's VGA warning light stays on, starting straight after the computer was moved or the card was taken out and put back.</dd>
-                <dt>What diagnosis usually finds</dt><dd>Small surface-mount components knocked off or cracked, often near the PCIe edge connector, where they are easily caught when a card is handled.</dd>
-                <dt>The repair</dt><dd>The missing or damaged parts are replaced, the area is checked under magnification, and the card's PCIe link is confirmed at its full width and speed.</dd>
+                <dt>What you see</dt><dd>No display, and the motherboard's VGA warning light stays on, every time or only on some starts, beginning straight after the computer was moved or the card was taken out and put back.</dd>
+                <dt>What diagnosis usually finds</dt><dd>Small surface-mount components knocked off or cracked, often near the PCIe edge connector, where they are easily caught when a card is handled. Dirty or damaged gold contacts on the edge connector itself can also cause detection that comes and goes.</dd>
+                <dt>The repair</dt><dd>Missing or damaged parts are replaced, the edge contacts cleaned and repaired where needed, the board checked for cracks around the slot, and the card's PCIe link confirmed at its full width and speed.</dd>
                 <dt>Price and bench time</dt><dd>From $370</dd>
                 </dl>
                 </div>
@@ -725,6 +725,7 @@
                 <h2>Related Pages</h2>
                 <ul class="service-list">
                 <li><a href="/services/graphics-card-repair-sydney">GPU and graphics card repair in Sydney</a>: every card model, drop-off near Castle Hill</li>
+                <li><a href="/services/rtx-3090-repair-sydney">RTX 3090 repair</a>: 24GB cards, rear memory, memory overheating and power faults</li>
                 <li><a href="/services/graphics-card-repair-australia">Mail-in GPU repair, Australia-wide</a>: packing, postage and state-by-state times</li>
                 <li><a href="/guides/gpu-artifacting">GPU artefacting guide</a>: checks to do before sending a card</li>
                 <li><a href="/services/board-level-repair">Board level repair</a>: laptop mainboards and other devices</li>
