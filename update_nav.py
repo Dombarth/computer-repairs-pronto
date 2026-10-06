@@ -99,7 +99,7 @@ def get_nav_template(prefix):
                 </ul>
             </div>
             <div class="mobile-menu-cta">
-                <a href="tel:0400454859">📞 Call 0400 454 859</a>
+                <a href="tel:0284289224">📞 Call 02 8428 9224</a>
             </div>
         </div>
         <script>
