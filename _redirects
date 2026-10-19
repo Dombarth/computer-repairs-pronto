@@ -25,5 +25,10 @@ https://computerrepairspronto.com.au/*  https://www.computerrepairspronto.com.au
 /data-recovery-north-sydney-nsw      /services/data-recovery   301
 /data-recovery-north-sydney-nsw/*    /services/data-recovery   301
 
+# Laptop guides (Oct 2026): alternative paths people type or link
+/services/laptop-wont-turn-on     /guides/laptop-wont-turn-on   301
+/guides/laptop-not-turning-on     /guides/laptop-wont-turn-on   301
+/services/laptop-not-charging     /guides/laptop-not-charging   301
+
 # Catch-all for 404
 /*  /404.html  404
