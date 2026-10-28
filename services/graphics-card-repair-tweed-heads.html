@@ -284,6 +284,12 @@
                                             <option>Not sure yet</option>
                                         </select>
 
+                                        <label for="miFound">How did you find us?</label>
+                                        <select id="miFound" name="how_found_us" required><option value="">Choose one</option><option>Google search</option><option>Google Maps</option><option>AI assistant (ChatGPT, Gemini, Copilot)</option><option>Bing or another search engine</option><option>Facebook or Instagram</option><option>YouTube</option><option>Friend, family or workmate</option><option>Returning customer</option><option>Other</option></select>
+
+                                        <label for="miSearch">What did you type into the search bar? <span style="font-weight:400;">(didn't search? type &quot;didn't search&quot;)</span></label>
+                                        <input id="miSearch" name="search_words" type="text" maxlength="150" required placeholder="e.g. graphics card repair">
+
                                         <label for="miMsg">Anything else? <span style="font-weight:400;">(optional)</span></label>
                                         <textarea id="miMsg" name="message" placeholder="When it started, what you have already tried, whether it has been opened before."></textarea>
 

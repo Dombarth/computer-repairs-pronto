@@ -724,6 +724,12 @@
                                         <label for="gpuPh">Mobile <span style="font-weight:400;">(optional)</span></label>
                                         <input id="gpuPh" name="mobile" type="tel" autocomplete="tel" placeholder="0400 000 000">
 
+                                        <label for="gpuFound">How did you find us?</label>
+                                        <select id="gpuFound" name="how_found_us" required><option value="">Choose one</option><option>Google search</option><option>Google Maps</option><option>AI assistant (ChatGPT, Gemini, Copilot)</option><option>Bing or another search engine</option><option>Facebook or Instagram</option><option>YouTube</option><option>Friend, family or workmate</option><option>Returning customer</option><option>Other</option></select>
+
+                                        <label for="gpuSearch">What did you type into the search bar? <span style="font-weight:400;">(didn't search? type &quot;didn't search&quot;)</span></label>
+                                        <input id="gpuSearch" name="search_words" type="text" maxlength="150" required placeholder="e.g. gpu repair sydney">
+
                                         <label for="gpuMsg">Anything else? <span style="font-weight:400;">(optional)</span></label>
                                         <textarea id="gpuMsg" name="message" placeholder="When it started, what you have already tried, anything unusual."></textarea>
 

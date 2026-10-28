@@ -273,6 +273,12 @@
                         <label for="ltPh">Mobile <span style="font-weight:400;">(optional)</span></label>
                         <input id="ltPh" name="mobile" type="tel" autocomplete="tel">
 
+                        <label for="ltFound">How did you find us?</label>
+                        <select id="ltFound" name="how_found_us" required><option value="">Choose one</option><option>Google search</option><option>Google Maps</option><option>AI assistant (ChatGPT, Gemini, Copilot)</option><option>Bing or another search engine</option><option>Facebook or Instagram</option><option>YouTube</option><option>Friend, family or workmate</option><option>Returning customer</option><option>Other</option></select>
+
+                        <label for="ltSearch">What did you type into the search bar? <span style="font-weight:400;">(didn't search? type &quot;didn't search&quot;)</span></label>
+                        <input id="ltSearch" name="search_words" type="text" maxlength="150" required placeholder="e.g. laptop repair castle hill">
+
                         <label for="ltMsg">Anything else? <span style="font-weight:400;">(optional)</span></label>
                         <textarea id="ltMsg" name="message" placeholder="When it started, what you have tried, any lights or messages."></textarea>
 
