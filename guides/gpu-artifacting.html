@@ -287,9 +287,9 @@
   submitted for indexing. If the deploy slips, update both to the real live
   date — a datePublished ahead of the live date is treated as unreliable.
 
-  The "Guides" breadcrumb level carries no "item" URL because PRD 4
-  explicitly excludes a /guides/ index page. Pointing at a non-existent
-  directory would emit a 404 from within valid schema.
+  The second breadcrumb level points at the GPU repair service page.
+  Google requires an "item" URL on every level except the last, and there
+  is no /guides/ index page to point at.
 -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -355,7 +355,7 @@
  "@type":"BreadcrumbList",
  "itemListElement":[
   {"@type":"ListItem","position":1,"name":"Home","item":"https://www.computerrepairspronto.com.au/"},
-  {"@type":"ListItem","position":2,"name":"Guides"},
+  {"@type":"ListItem","position":2,"name":"GPU & Graphics Card Repair", "item": "https://www.computerrepairspronto.com.au/services/graphics-card-repair-sydney"},
   {"@type":"ListItem","position":3,"name":"GPU Artifacting","item":"https://www.computerrepairspronto.com.au/guides/gpu-artifacting"}
  ]
 }]}
